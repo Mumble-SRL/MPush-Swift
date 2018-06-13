@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  # s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush' }
-  s.source_files = "MumblePush/*.{h,m,swift}"
+  s.source_files = "MumblePush/*.{h,m,swift}", "MumblePush/**/*.{h,m,swift}"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
