@@ -7,18 +7,7 @@
 //
 
 import UIKit
-
-public enum HTTPMethod: String {
-    case options = "OPTIONS"
-    case get     = "GET"
-    case head    = "HEAD"
-    case post    = "POST"
-    case put     = "PUT"
-    case patch   = "PATCH"
-    case delete  = "DELETE"
-    case trace   = "TRACE"
-    case connect = "CONNECT"
-}
+import Alamofire
 
 public struct MumblePushError: Error, LocalizedError, CustomStringConvertible {
     let domain: String
@@ -43,6 +32,79 @@ internal class MumblePushApiManager: NSObject {
                                  headers: [String: String]?,
                                  success: (([String: Any]) -> Void)? = nil,
                                  failure: ((Error?) -> Void)? = nil) {
-        
+        let completeUrlString = baseUrl + "/" + name
+        if let url = URL(string: completeUrlString){
+            Alamofire.request(url, method: method, parameters: parameters, headers: headers).responseJSON { (response) in
+                switch response.result {
+                case .success:
+                    if let json = response.result.value as? [String: Any] {
+                        self.parseJsonResponse(response: response, json: json, success: success, failure: failure)
+                    } else {
+                        if let failure = failure {
+                            failure(response.error)
+                        }
+                    }
+                case .failure(let error):
+                    if let failure = failure {
+                        failure(error)
+                    }
+                }
+            }
+        }
+        else {
+            if let failure = failure {
+                failure(MumblePushError(domain: "com.mumble.push",
+                                        code: 101,
+                                        message: "URL(\(completeUrlString) is in the wrong format"))
+            }
+        }
+    }
+    
+    private static func parseJsonResponse(response: DataResponse<Any>,
+                                          json: [String: Any],
+                                          success: (([String: Any]) -> Void)?,
+                                          failure: ((Error?) -> Void)?) {
+        var message = ""
+        if let errors = json["errors"] as? [String: Any] {
+            for key in errors.keys {
+                if let errorsArray = errors[key] as? [String] {
+                    if message == "" {
+                        message += "\(errorsArray.joined(separator: "\n"))"
+                    } else {
+                        message += "\n\(errorsArray.joined(separator: "\n"))"
+                    }
+                }
+            }
+            if let failure = failure {
+                let error = MumblePushError(domain: "com.mumble.push",
+                                            code: response.response?.statusCode ?? 0,
+                                            message: message)
+                failure(error)
+            }
+        } else {
+            if let responseDict = json["response"] as? [String: Any] {
+                let statusCode = responseDict["status_code"] as? Int ?? -1
+                if statusCode == 0 {
+                    if let success = success {
+                        success(responseDict)
+                    }
+                } else {
+                    let message = responseDict["message_localized"] as? String ?? ""
+                    let error = MumblePushError(domain: "com.mumble.push",
+                                                code: response.response?.statusCode ?? 0,
+                                                message: message)
+                    if let failure = failure {
+                        failure(error)
+                    }
+                }
+            } else {
+                let error = MumblePushError(domain: "com.mumble.push",
+                                            code: response.response?.statusCode ?? 0,
+                                            message: "Can't find response")
+                if let failure = failure {
+                    failure(error)
+                }
+            }
+        }
     }
 }
