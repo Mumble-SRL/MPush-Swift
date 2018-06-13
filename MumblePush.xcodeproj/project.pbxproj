@@ -12,6 +12,8 @@
 		66F9AF7920CEC2AF003590C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AF7720CEC2AF003590C0 /* Main.storyboard */; };
 		66F9AF7B20CEC2B2003590C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AF7A20CEC2B2003590C0 /* Assets.xcassets */; };
 		66F9AF7E20CEC2B2003590C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AF7C20CEC2B2003590C0 /* LaunchScreen.storyboard */; };
+		66F9AF8720CEC2DC003590C0 /* MumblePush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AF8620CEC2DC003590C0 /* MumblePush.swift */; };
+		66F9AF8A20CEC498003590C0 /* MumblePushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AF8920CEC498003590C0 /* MumblePushApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		66F9AF7A20CEC2B2003590C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F9AF7D20CEC2B2003590C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F9AF7F20CEC2B2003590C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F9AF8620CEC2DC003590C0 /* MumblePush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MumblePush.swift; sourceTree = "<group>"; };
+		66F9AF8920CEC498003590C0 /* MumblePushApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MumblePushApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,20 @@
 			children = (
 				66F9AF7320CEC2AF003590C0 /* AppDelegate.swift */,
 				66F9AF7520CEC2AF003590C0 /* ViewController.swift */,
+				66F9AF8520CEC2BE003590C0 /* MumblePush */,
 				66F9AF7720CEC2AF003590C0 /* Main.storyboard */,
 				66F9AF7A20CEC2B2003590C0 /* Assets.xcassets */,
 				66F9AF7C20CEC2B2003590C0 /* LaunchScreen.storyboard */,
 				66F9AF7F20CEC2B2003590C0 /* Info.plist */,
+			);
+			path = MumblePush;
+			sourceTree = "<group>";
+		};
+		66F9AF8520CEC2BE003590C0 /* MumblePush */ = {
+			isa = PBXGroup;
+			children = (
+				66F9AF8620CEC2DC003590C0 /* MumblePush.swift */,
+				66F9AF8920CEC498003590C0 /* MumblePushApiManager.swift */,
 			);
 			path = MumblePush;
 			sourceTree = "<group>";
@@ -74,6 +88,7 @@
 				66F9AF6C20CEC2AF003590C0 /* Sources */,
 				66F9AF6D20CEC2AF003590C0 /* Frameworks */,
 				66F9AF6E20CEC2AF003590C0 /* Resources */,
+				66F9AF8820CEC314003590C0 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -130,12 +145,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66F9AF8820CEC314003590C0 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		66F9AF6C20CEC2AF003590C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F9AF8A20CEC498003590C0 /* MumblePushApiManager.swift in Sources */,
 				66F9AF7620CEC2AF003590C0 /* ViewController.swift in Sources */,
+				66F9AF8720CEC2DC003590C0 /* MumblePush.swift in Sources */,
 				66F9AF7420CEC2AF003590C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +321,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.MumblePush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.MumblePush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

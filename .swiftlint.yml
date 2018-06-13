@@ -1,0 +1,10 @@
+disabled_rules: # rule identifiers to exclude from running
+  - todo
+  - trailing_whitespace
+  - line_length
+  - function_body_length
+  - function_parameter_count
+  - file_length
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
