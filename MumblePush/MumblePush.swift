@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MumblePush: NSObject {
+public class MumblePush: NSObject {
     public static var token: String?
     
     public static func registerDevice(deviceToken: Data,
