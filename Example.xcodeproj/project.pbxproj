@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66F9AF7420CEC2AF003590C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AF7320CEC2AF003590C0 /* AppDelegate.swift */; };
-		66F9AF7620CEC2AF003590C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AF7520CEC2AF003590C0 /* ViewController.swift */; };
-		66F9AF7920CEC2AF003590C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AF7720CEC2AF003590C0 /* Main.storyboard */; };
-		66F9AF7B20CEC2B2003590C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AF7A20CEC2B2003590C0 /* Assets.xcassets */; };
-		66F9AF7E20CEC2B2003590C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AF7C20CEC2B2003590C0 /* LaunchScreen.storyboard */; };
-		66F9AF8720CEC2DC003590C0 /* MumblePush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AF8620CEC2DC003590C0 /* MumblePush.swift */; };
-		66F9AF8A20CEC498003590C0 /* MumblePushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AF8920CEC498003590C0 /* MumblePushApiManager.swift */; };
+		662E1F6520D1437D00B7A855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E1F6420D1437D00B7A855 /* AppDelegate.swift */; };
+		662E1F6720D1437D00B7A855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E1F6620D1437D00B7A855 /* ViewController.swift */; };
+		662E1F6A20D1437D00B7A855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E1F6820D1437D00B7A855 /* Main.storyboard */; };
+		662E1F6C20D1437E00B7A855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662E1F6B20D1437E00B7A855 /* Assets.xcassets */; };
+		662E1F6F20D1437E00B7A855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E1F6D20D1437E00B7A855 /* LaunchScreen.storyboard */; };
+		66F94DEF20D143B100405EC0 /* MumblePush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DED20D143B000405EC0 /* MumblePush.swift */; };
+		66F94DF020D143B100405EC0 /* MumblePushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DEE20D143B000405EC0 /* MumblePushApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		66F9AF7020CEC2AF003590C0 /* MumblePush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MumblePush.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66F9AF7320CEC2AF003590C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66F9AF7520CEC2AF003590C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		66F9AF7820CEC2AF003590C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		66F9AF7A20CEC2B2003590C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		66F9AF7D20CEC2B2003590C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		66F9AF7F20CEC2B2003590C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66F9AF8620CEC2DC003590C0 /* MumblePush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MumblePush.swift; sourceTree = "<group>"; };
-		66F9AF8920CEC498003590C0 /* MumblePushApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MumblePushApiManager.swift; sourceTree = "<group>"; };
+		662E1F6120D1437D00B7A855 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		662E1F6420D1437D00B7A855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		662E1F6620D1437D00B7A855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		662E1F6920D1437D00B7A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		662E1F6B20D1437E00B7A855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		662E1F6E20D1437E00B7A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		662E1F7020D1437E00B7A855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F94DED20D143B000405EC0 /* MumblePush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MumblePush.swift; path = MumblePush/MumblePush.swift; sourceTree = SOURCE_ROOT; };
+		66F94DEE20D143B000405EC0 /* MumblePushApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MumblePushApiManager.swift; path = MumblePush/MumblePushApiManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		66F9AF6D20CEC2AF003590C0 /* Frameworks */ = {
+		662E1F5E20D1437D00B7A855 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,82 +39,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		66F9AF6720CEC2AF003590C0 = {
+		662E1F5820D1437D00B7A855 = {
 			isa = PBXGroup;
 			children = (
-				66F9AF7220CEC2AF003590C0 /* MumblePush */,
-				66F9AF7120CEC2AF003590C0 /* Products */,
+				662E1F6320D1437D00B7A855 /* Example */,
+				662E1F6220D1437D00B7A855 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		66F9AF7120CEC2AF003590C0 /* Products */ = {
+		662E1F6220D1437D00B7A855 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66F9AF7020CEC2AF003590C0 /* MumblePush.app */,
+				662E1F6120D1437D00B7A855 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66F9AF7220CEC2AF003590C0 /* MumblePush */ = {
+		662E1F6320D1437D00B7A855 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				66F9AF7320CEC2AF003590C0 /* AppDelegate.swift */,
-				66F9AF7520CEC2AF003590C0 /* ViewController.swift */,
-				66F9AF8520CEC2BE003590C0 /* MumblePush */,
-				66F9AF7720CEC2AF003590C0 /* Main.storyboard */,
-				66F9AF7A20CEC2B2003590C0 /* Assets.xcassets */,
-				66F9AF7C20CEC2B2003590C0 /* LaunchScreen.storyboard */,
-				66F9AF7F20CEC2B2003590C0 /* Info.plist */,
+				662E1F6420D1437D00B7A855 /* AppDelegate.swift */,
+				662E1F6620D1437D00B7A855 /* ViewController.swift */,
+				66F94DEC20D143A600405EC0 /* MumblePush */,
+				662E1F6820D1437D00B7A855 /* Main.storyboard */,
+				662E1F6B20D1437E00B7A855 /* Assets.xcassets */,
+				662E1F6D20D1437E00B7A855 /* LaunchScreen.storyboard */,
+				662E1F7020D1437E00B7A855 /* Info.plist */,
 			);
-			path = MumblePush;
+			path = Example;
 			sourceTree = "<group>";
 		};
-		66F9AF8520CEC2BE003590C0 /* MumblePush */ = {
+		66F94DEC20D143A600405EC0 /* MumblePush */ = {
 			isa = PBXGroup;
 			children = (
-				66F9AF8620CEC2DC003590C0 /* MumblePush.swift */,
-				66F9AF8920CEC498003590C0 /* MumblePushApiManager.swift */,
+				66F94DED20D143B000405EC0 /* MumblePush.swift */,
+				66F94DEE20D143B000405EC0 /* MumblePushApiManager.swift */,
 			);
-			path = MumblePush;
+			name = MumblePush;
+			path = ../MumblePush;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66F9AF6F20CEC2AF003590C0 /* MumblePush */ = {
+		662E1F6020D1437D00B7A855 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66F9AF8220CEC2B2003590C0 /* Build configuration list for PBXNativeTarget "MumblePush" */;
+			buildConfigurationList = 662E1F7320D1437E00B7A855 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				66F9AF6C20CEC2AF003590C0 /* Sources */,
-				66F9AF6D20CEC2AF003590C0 /* Frameworks */,
-				66F9AF6E20CEC2AF003590C0 /* Resources */,
-				66F9AF8820CEC314003590C0 /* SwiftLint */,
+				662E1F5D20D1437D00B7A855 /* Sources */,
+				662E1F5E20D1437D00B7A855 /* Frameworks */,
+				662E1F5F20D1437D00B7A855 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MumblePush;
-			productName = MumblePush;
-			productReference = 66F9AF7020CEC2AF003590C0 /* MumblePush.app */;
+			name = Example;
+			productName = Example;
+			productReference = 662E1F6120D1437D00B7A855 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		66F9AF6820CEC2AF003590C0 /* Project object */ = {
+		662E1F5920D1437D00B7A855 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Mumble;
 				TargetAttributes = {
-					66F9AF6F20CEC2AF003590C0 = {
+					662E1F6020D1437D00B7A855 = {
 						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
-			buildConfigurationList = 66F9AF6B20CEC2AF003590C0 /* Build configuration list for PBXProject "MumblePush" */;
+			buildConfigurationList = 662E1F5C20D1437D00B7A855 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,73 +122,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 66F9AF6720CEC2AF003590C0;
-			productRefGroup = 66F9AF7120CEC2AF003590C0 /* Products */;
+			mainGroup = 662E1F5820D1437D00B7A855;
+			productRefGroup = 662E1F6220D1437D00B7A855 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66F9AF6F20CEC2AF003590C0 /* MumblePush */,
+				662E1F6020D1437D00B7A855 /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		66F9AF6E20CEC2AF003590C0 /* Resources */ = {
+		662E1F5F20D1437D00B7A855 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F9AF7E20CEC2B2003590C0 /* LaunchScreen.storyboard in Resources */,
-				66F9AF7B20CEC2B2003590C0 /* Assets.xcassets in Resources */,
-				66F9AF7920CEC2AF003590C0 /* Main.storyboard in Resources */,
+				662E1F6F20D1437E00B7A855 /* LaunchScreen.storyboard in Resources */,
+				662E1F6C20D1437E00B7A855 /* Assets.xcassets in Resources */,
+				662E1F6A20D1437D00B7A855 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		66F9AF8820CEC314003590C0 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		66F9AF6C20CEC2AF003590C0 /* Sources */ = {
+		662E1F5D20D1437D00B7A855 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F9AF8A20CEC498003590C0 /* MumblePushApiManager.swift in Sources */,
-				66F9AF7620CEC2AF003590C0 /* ViewController.swift in Sources */,
-				66F9AF8720CEC2DC003590C0 /* MumblePush.swift in Sources */,
-				66F9AF7420CEC2AF003590C0 /* AppDelegate.swift in Sources */,
+				66F94DF020D143B100405EC0 /* MumblePushApiManager.swift in Sources */,
+				662E1F6720D1437D00B7A855 /* ViewController.swift in Sources */,
+				66F94DEF20D143B100405EC0 /* MumblePush.swift in Sources */,
+				662E1F6520D1437D00B7A855 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		66F9AF7720CEC2AF003590C0 /* Main.storyboard */ = {
+		662E1F6820D1437D00B7A855 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				66F9AF7820CEC2AF003590C0 /* Base */,
+				662E1F6920D1437D00B7A855 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		66F9AF7C20CEC2B2003590C0 /* LaunchScreen.storyboard */ = {
+		662E1F6D20D1437E00B7A855 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				66F9AF7D20CEC2B2003590C0 /* Base */,
+				662E1F6E20D1437E00B7A855 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -196,7 +179,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		66F9AF8020CEC2B2003590C0 /* Debug */ = {
+		662E1F7120D1437E00B7A855 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,7 +239,7 @@
 			};
 			name = Debug;
 		};
-		66F9AF8120CEC2B2003590C0 /* Release */ = {
+		662E1F7220D1437E00B7A855 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -310,36 +293,36 @@
 			};
 			name = Release;
 		};
-		66F9AF8320CEC2B2003590C0 /* Debug */ = {
+		662E1F7420D1437E00B7A855 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXR257ENWG;
-				INFOPLIST_FILE = MumblePush/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		66F9AF8420CEC2B2003590C0 /* Release */ = {
+		662E1F7520D1437E00B7A855 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXR257ENWG;
-				INFOPLIST_FILE = MumblePush/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,25 +332,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		66F9AF6B20CEC2AF003590C0 /* Build configuration list for PBXProject "MumblePush" */ = {
+		662E1F5C20D1437D00B7A855 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66F9AF8020CEC2B2003590C0 /* Debug */,
-				66F9AF8120CEC2B2003590C0 /* Release */,
+				662E1F7120D1437E00B7A855 /* Debug */,
+				662E1F7220D1437E00B7A855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66F9AF8220CEC2B2003590C0 /* Build configuration list for PBXNativeTarget "MumblePush" */ = {
+		662E1F7320D1437E00B7A855 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66F9AF8320CEC2B2003590C0 /* Debug */,
-				66F9AF8420CEC2B2003590C0 /* Release */,
+				662E1F7420D1437E00B7A855 /* Debug */,
+				662E1F7520D1437E00B7A855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 66F9AF6820CEC2AF003590C0 /* Project object */;
+	rootObject = 662E1F5920D1437D00B7A855 /* Project object */;
 }

@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush' }
-  s.source_files = "MumblePush/**/*.{h,m,swift}"
+  s.source_files = "MumblePush/*.{h,m,swift}"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
