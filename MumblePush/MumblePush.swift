@@ -13,7 +13,7 @@ public class MumblePush: NSObject {
     
     public static func registerDevice(deviceToken: Data,
                                success: (() -> Void)? = nil,
-                               failure: ((Error) -> Void)? = nil) {
+                               failure: ((Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -33,7 +33,13 @@ public class MumblePush: NSObject {
         MumblePushApiManager.callApi(withName: "tokens",
                                      method: .post,
                                      parameters: parameters,
-                                     headers: self.defaultHeaders())
+                                     headers: self.defaultHeaders(),
+                                     success: { _ in
+                                        if let success = success {
+                                            success()
+                                        }
+                                     },
+                                     failure: failure)
     }
     
     public static func register(toTopic topic: String,
@@ -44,7 +50,7 @@ public class MumblePush: NSObject {
     
     public static func register(toTopics topics: [String],
                          success: (() -> Void)? = nil,
-                         failure: ((Error) -> Void)? = nil) {
+                         failure: ((Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -61,19 +67,25 @@ public class MumblePush: NSObject {
         MumblePushApiManager.callApi(withName: "register",
                                      method: .post,
                                      parameters: parameters,
-                                     headers: self.defaultHeaders())
+                                     headers: self.defaultHeaders(),
+                                     success: { _ in
+                                        if let success = success {
+                                            success()
+                                        }
+                                     },
+                                     failure: failure)
     }
     
     public static func unregister(fromTopic topic: String,
                            success: (() -> Void)? = nil,
-                           failure: ((Error) -> Void)? = nil) {
+                           failure: ((Error?) -> Void)? = nil) {
         self.unregister(fromTopics: [topic])
         
     }
     
     public static func unregister(fromTopics topics: [String],
                            success: (() -> Void)? = nil,
-                           failure: ((Error) -> Void)? = nil) {
+                           failure: ((Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -90,13 +102,19 @@ public class MumblePush: NSObject {
         MumblePushApiManager.callApi(withName: "unregister",
                                      method: .post,
                                      parameters: parameters,
-                                     headers: self.defaultHeaders())
+                                     headers: self.defaultHeaders(),
+                                     success: { _ in
+                                        if let success = success {
+                                            success()
+                                        }
+                                     },
+                                     failure: failure)
     }
     
     // MARK: Private functions
     
     private static func defaultHeaders() -> [String: String] {
-        var headers = ["Accept": "applicar"]
+        var headers = ["Accept": "application/json"]
         if let token = token {
             headers["X-MPush-Token"] = token
         }
