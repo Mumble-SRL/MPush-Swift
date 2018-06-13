@@ -9,9 +9,9 @@
 import UIKit
 
 class MumblePush: NSObject {
-    static var token: String?
+    public static var token: String?
     
-    static func registerDevice(deviceToken: Data,
+    public static func registerDevice(deviceToken: Data,
                                success: (() -> Void)? = nil,
                                failure: ((Error) -> Void)? = nil) {
         if token == nil {
@@ -36,13 +36,13 @@ class MumblePush: NSObject {
                                      headers: self.defaultHeaders())
     }
     
-    static func register(toTopic topic: String,
+    public static func register(toTopic topic: String,
                          success: (() -> Void)? = nil,
                          failure: ((Error) -> Void)? = nil) {
         self.register(toTopics: [topic])
     }
     
-    static func register(toTopics topics: [String],
+    public static func register(toTopics topics: [String],
                          success: (() -> Void)? = nil,
                          failure: ((Error) -> Void)? = nil) {
         if token == nil {
@@ -64,14 +64,14 @@ class MumblePush: NSObject {
                                      headers: self.defaultHeaders())
     }
     
-    static func unregister(fromTopic topic: String,
+    public static func unregister(fromTopic topic: String,
                            success: (() -> Void)? = nil,
                            failure: ((Error) -> Void)? = nil) {
         self.unregister(fromTopics: [topic])
         
     }
     
-    static func unregister(fromTopics topics: [String],
+    public static func unregister(fromTopics topics: [String],
                            success: (() -> Void)? = nil,
                            failure: ((Error) -> Void)? = nil) {
         if token == nil {
