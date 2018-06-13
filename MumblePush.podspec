@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MumblePush"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Mumble Push SDK."
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush' }
-  s.source_files = "MumblePush/*.{h,m,swift}", "MumblePush/**/*.{h,m,swift}"
+  s.source_files = "MumblePush/**/*.{h,m,swift}"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
