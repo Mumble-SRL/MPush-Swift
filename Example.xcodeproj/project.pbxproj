@@ -26,6 +26,7 @@
 		662E1F6B20D1437E00B7A855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662E1F6E20D1437E00B7A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662E1F7020D1437E00B7A855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6682ADA020D29B3E00CB5115 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		66F94DED20D143B000405EC0 /* MumblePush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MumblePush.swift; path = MumblePush/MumblePush.swift; sourceTree = SOURCE_ROOT; };
 		66F94DEE20D143B000405EC0 /* MumblePushApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MumblePushApiManager.swift; path = MumblePush/MumblePushApiManager.swift; sourceTree = SOURCE_ROOT; };
 		8C063EE30C4539A55ED7FDA4 /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +75,7 @@
 		662E1F6320D1437D00B7A855 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				6682ADA020D29B3E00CB5115 /* Example.entitlements */,
 				662E1F6420D1437D00B7A855 /* AppDelegate.swift */,
 				662E1F6620D1437D00B7A855 /* ViewController.swift */,
 				66F94DEC20D143A600405EC0 /* MumblePush */,
@@ -136,6 +138,11 @@
 				TargetAttributes = {
 					662E1F6020D1437D00B7A855 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -344,14 +351,16 @@
 			baseConfigurationReference = 1AB98D8FDE1B0AC9538D2EE1 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXR257ENWG;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,14 +372,16 @@
 			baseConfigurationReference = 8DB5402235DF08EBB0579DFF /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXR257ENWG;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

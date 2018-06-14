@@ -122,10 +122,24 @@ public class MumblePush: NSObject {
     }
     
     private static func defaultParameters() -> [String: String] {
-        if let deviceId = UIDevice.current.identifierForVendor {
-            return ["device_id": deviceId.uuidString]
+        if let deviceIdString = self.deviceIdString() {
+            return ["device_id": deviceIdString]
         }
         return [String: String]()
+    }
+    
+    private static func deviceIdString() -> String? {
+        let userDefaults = UserDefaults(suiteName: "MumblePush")
+        if let deviceIdString = userDefaults?.value(forKey: "device_id") as? String {
+            return deviceIdString
+        }
+        if let deviceId = UIDevice.current.identifierForVendor {
+            let deviceIdString = deviceId.uuidString
+            userDefaults?.set(deviceIdString, forKey: "device_id")
+            userDefaults?.synchronize()
+            return deviceIdString
+        }
+        return nil
     }
     
     private static func tokenError() -> Error {
