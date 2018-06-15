@@ -111,6 +111,27 @@ public class MumblePush: NSObject {
                                      failure: failure)
     }
     
+    public static func unregisterFromAllTopics(success: (() -> Void)? = nil,
+                                               failure: ((Error?) -> Void)? = nil) {
+        if token == nil {
+            if let failure = failure {
+                failure(tokenError())
+            }
+            return
+        }
+        
+        MumblePushApiManager.callApi(withName: "unregister-all",
+                                     method: .post,
+                                     parameters: self.defaultParameters(),
+                                     headers: self.defaultHeaders(),
+                                     success: { _ in
+                                        if let success = success {
+                                            success()
+                                        }
+        },
+                                     failure: failure)
+    }
+    
     // MARK: Private functions
     
     private static func defaultHeaders() -> [String: String] {
