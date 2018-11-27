@@ -30,8 +30,8 @@ internal class MumblePushApiManager: NSObject {
                                  method: HTTPMethod,
                                  parameters: [String: Any]?,
                                  headers: [String: String]?,
-                                 success: (([String: Any]) -> Void)? = nil,
-                                 failure: ((Error?) -> Void)? = nil) {
+                                 success: ((_ response: [String: Any]) -> Void)? = nil,
+                                 failure: ((_ error: Error?) -> Void)? = nil) {
         let completeUrlString = baseUrl + "/" + name
         if let url = URL(string: completeUrlString){
             Alamofire.request(url, method: method, parameters: parameters, headers: headers).responseJSON { (response) in
@@ -62,8 +62,8 @@ internal class MumblePushApiManager: NSObject {
     
     private static func parseJsonResponse(response: DataResponse<Any>,
                                           json: [String: Any],
-                                          success: (([String: Any]) -> Void)?,
-                                          failure: ((Error?) -> Void)?) {
+                                          success: ((_ response: [String: Any]) -> Void)?,
+                                          failure: ((_ error: Error?) -> Void)?) {
         var message = ""
         if let errors = json["errors"] as? [String: Any] {
             for key in errors.keys {

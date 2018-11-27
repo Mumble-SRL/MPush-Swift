@@ -13,7 +13,7 @@ public class MumblePush: NSObject {
     
     public static func registerDevice(deviceToken: Data,
                                success: (() -> Void)? = nil,
-                               failure: ((Error?) -> Void)? = nil) {
+                               failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -44,13 +44,13 @@ public class MumblePush: NSObject {
     
     public static func register(toTopic topic: String,
                          success: (() -> Void)? = nil,
-                         failure: ((Error) -> Void)? = nil) {
+                         failure: ((_ error: Error) -> Void)? = nil) {
         self.register(toTopics: [topic])
     }
     
     public static func register(toTopics topics: [String],
                          success: (() -> Void)? = nil,
-                         failure: ((Error?) -> Void)? = nil) {
+                         failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -78,14 +78,14 @@ public class MumblePush: NSObject {
     
     public static func unregister(fromTopic topic: String,
                            success: (() -> Void)? = nil,
-                           failure: ((Error?) -> Void)? = nil) {
+                           failure: ((_ error: Error?) -> Void)? = nil) {
         self.unregister(fromTopics: [topic])
         
     }
     
     public static func unregister(fromTopics topics: [String],
                            success: (() -> Void)? = nil,
-                           failure: ((Error?) -> Void)? = nil) {
+                           failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -112,7 +112,7 @@ public class MumblePush: NSObject {
     }
     
     public static func unregisterFromAllTopics(success: (() -> Void)? = nil,
-                                               failure: ((Error?) -> Void)? = nil) {
+                                               failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
