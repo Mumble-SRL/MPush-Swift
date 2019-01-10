@@ -52,7 +52,7 @@ Note that `MPush ` has `Alamofire (4.0)` as dependency, so you have to install a
 
 The first thig you have to do is implement Push Notifications using the [UserNotifications](https://developer.apple.com/documentation/usernotifications) framework.
 
-> You will be guided through all the steps needed to have a functional project wth the push notifications, if you have already done it you can skip to the [Integrate MPush](#integrate-mpus) section of this README.
+> You will be guided through all the steps needed to have a functional project wth the push notifications, if you have already done it you can skip to the [Integrate MPush](#integrate-mpush) section of this README.
 
 
 # Create a key
