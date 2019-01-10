@@ -1,5 +1,5 @@
 platform :ios, '10.0'
 
-target 'Example' do
+target 'MPush' do
     pod 'Alamofire'
 end

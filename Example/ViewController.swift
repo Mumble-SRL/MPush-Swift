@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Example
+//  MPush
 //
-//  Created by Lorenzo Oliveto on 13/06/18.
-//  Copyright © 2018 Mumble. All rights reserved.
+//  Copyright © 2018 Mumble s.r.l. (https://mumbleideas.it/).
+//  All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

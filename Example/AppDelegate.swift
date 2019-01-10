@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Example
+//  MPush
 //
-//  Created by Lorenzo Oliveto on 13/06/18.
-//  Copyright © 2018 Mumble. All rights reserved.
+//  Copyright © 2018 Mumble s.r.l. (https://mumbleideas.it/).
+//  All rights reserved.
 //
 
 import UIKit
@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        MumblePush.token = "9b7e6718bc75b1831aaf6bb9a01e761f897b214f"
+        MPush.token = "YOUR_PUSH_TOKEN"
 
         let userNotificationCenter = UNUserNotificationCenter.current()
         userNotificationCenter.delegate = self
@@ -68,8 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        MumblePush.registerDevice(deviceToken: deviceToken, success: {
-            MumblePush.register(toTopic: "topic")
+        MPush.registerDevice(deviceToken: deviceToken, success: {
+            MPush.register(toTopic: "YOUR_TOPIC")
         })
     }
     
@@ -94,4 +93,3 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         completionHandler()
     }
 }
-

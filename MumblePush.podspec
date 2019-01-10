@@ -15,18 +15,18 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "MumblePush"
-  s.version      = "0.0.7"
-  s.summary      = "Mumble Push SDK."
+  s.name         = "MPush"
+  s.version      = "0.1"
+  s.summary      = "MPush iOS SDK."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "Mumble Push SDK."
+  s.description  = "MPush iOS SDK."
 
-  s.homepage     = "https://gitlab.mumbleserver.it/iOS/MumblePush"
+  s.homepage     = "https://github.com/Mumble-SRL/MPush-iOS"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  s.ios.deployment_target = "10.0"
+  s.ios.deployment_target = "11.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -78,8 +78,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush' }
-  s.source_files = "MumblePush/*.{h,m,swift}"
+  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-iOS' }
+  s.source_files = "MPush/*.{h,m,swift}"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
