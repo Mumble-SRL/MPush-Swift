@@ -144,7 +144,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     MPush.registerDevice(deviceToken: deviceToken, success: {
         MPush.register(toTopic: "YOUR_TOPIC")
-        // OR if you have more than one topci
+        // OR if you have more than one topic
         // MPush.register(toTopics: ["TOPIC1", "TOPIC2"])
     })
 }
