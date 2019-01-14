@@ -60,8 +60,8 @@ public class MPush: NSObject {
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
     public static func register(toTopic topic: String,
                                 success: (() -> Void)? = nil,
-                                failure: ((_ error: Error) -> Void)? = nil) {
-        self.register(toTopics: [topic])
+                                failure: ((_ error: Error?) -> Void)? = nil) {
+        self.register(toTopics: [topic], success: success, failure: failure)
     }
     
     /// Register the current device to an array of topics
@@ -107,7 +107,7 @@ public class MPush: NSObject {
     public static func unregister(fromTopic topic: String,
                                   success: (() -> Void)? = nil,
                                   failure: ((_ error: Error?) -> Void)? = nil) {
-        self.unregister(fromTopics: [topic])
+        self.unregister(fromTopics: [topic], success: success, failure: failure)
         
     }
     
