@@ -13,7 +13,7 @@ import UIKit
 public class MPush: NSObject {
     
     /// The token of MPush
-    public static var token: String?
+    @objc public static var token: String?
     
     /// Register a device token
     ///
@@ -21,9 +21,9 @@ public class MPush: NSObject {
     ///   - deviceToken: The device token data returned in didRegisterForRemoteNotificationsWithDeviceToken
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func registerDevice(deviceToken: Data,
-                                      success: (() -> Void)? = nil,
-                                      failure: ((_ error: Error?) -> Void)? = nil) {
+    @objc public static func registerDevice(deviceToken: Data,
+                                            success: (() -> Void)? = nil,
+                                            failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -39,7 +39,7 @@ public class MPush: NSObject {
         var parameters = self.defaultParameters()
         parameters["platform"] = "ios"
         parameters["token"] = deviceToken
-
+        
         MPushApiManager.callApi(withName: "tokens",
                                 method: .post,
                                 parameters: parameters,
@@ -58,9 +58,9 @@ public class MPush: NSObject {
     ///   - topic: The topic you will register to
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func register(toTopic topic: String,
-                                success: (() -> Void)? = nil,
-                                failure: ((_ error: Error?) -> Void)? = nil) {
+    @objc public static func register(toTopic topic: String,
+                                      success: (() -> Void)? = nil,
+                                      failure: ((_ error: Error?) -> Void)? = nil) {
         self.register(toTopics: [topic], success: success, failure: failure)
     }
     
@@ -70,9 +70,9 @@ public class MPush: NSObject {
     ///   - topic: The topics you will register to
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func register(toTopics topics: [String],
-                                success: (() -> Void)? = nil,
-                                failure: ((_ error: Error?) -> Void)? = nil) {
+    @objc public static func register(toTopics topics: [String],
+                                      success: (() -> Void)? = nil,
+                                      failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
@@ -104,9 +104,9 @@ public class MPush: NSObject {
     ///   - topic: The topic you will unregister from
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func unregister(fromTopic topic: String,
-                                  success: (() -> Void)? = nil,
-                                  failure: ((_ error: Error?) -> Void)? = nil) {
+    @objc public static func unregister(fromTopic topic: String,
+                                        success: (() -> Void)? = nil,
+                                        failure: ((_ error: Error?) -> Void)? = nil) {
         self.unregister(fromTopics: [topic], success: success, failure: failure)
         
     }
@@ -117,16 +117,16 @@ public class MPush: NSObject {
     ///   - topic: The topics you will unregister from
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func unregister(fromTopics topics: [String],
-                                  success: (() -> Void)? = nil,
-                                  failure: ((_ error: Error?) -> Void)? = nil) {
+    @objc public static func unregister(fromTopics topics: [String],
+                                        success: (() -> Void)? = nil,
+                                        failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
             }
             return
         }
-
+        
         var parameters = self.defaultParameters()
         do {
             let encodedTopics = try JSONEncoder().encode(topics)
@@ -150,8 +150,8 @@ public class MPush: NSObject {
     /// - Parameters:
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func unregisterFromAllTopics(success: (() -> Void)? = nil,
-                                               failure: ((_ error: Error?) -> Void)? = nil) {
+    @objc public static func unregisterFromAllTopics(success: (() -> Void)? = nil,
+                                                     failure: ((_ error: Error?) -> Void)? = nil) {
         if token == nil {
             if let failure = failure {
                 failure(tokenError())
