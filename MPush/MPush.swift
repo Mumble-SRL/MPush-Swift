@@ -67,7 +67,7 @@ public class MPush: NSObject {
     /// Register the current device to an array of topics
     ///
     /// - Parameters:
-    ///   - topic: The topics you will register to
+    ///   - topics: The topics you will register to
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
     @objc public static func register(toTopics topics: [String],
@@ -114,7 +114,7 @@ public class MPush: NSObject {
     /// Unregister the current device from an array of topics
     ///
     /// - Parameters:
-    ///   - topic: The topics you will unregister from
+    ///   - topics: The topics you will unregister from
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
     @objc public static func unregister(fromTopics topics: [String],

@@ -50,14 +50,220 @@
           <section class="section">
             
             <h1 id='mpush-ios-sdk' class='heading'>MPush iOS SDK</h1>
+
+<p><img src="docs/badge.svg" alt="Test Status">
+<img src="https://img.shields.io/badge/pod-v1.0-blue.svg" alt="License: MIT">
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="CocoaPods"></a></p>
+
+<p>MPush is a client libary, written in Swift, that can be used to interact with the <a href="https://mpush.app">MPush</a> API. The minimum deplaoyment target for the library is iOS 11.0. </p>
+
+<p>MPush uses a classic Pub/Sub pattern, you will register your devce to topics, then from the MPush apis you will be able to send notifications to those topics and all device registered will receive a notification.</p>
+
+<p>A topic can represent whatever you want in your system (e.g. the entire app, a user a subset of user with a common charachteristic) so you will be able to choose the granularity of the notifications.</p>
+<h1 id='minimum-requirements' class='heading'>Minimum Requirements</h1>
+
+<ul>
+<li><a href="https://github.com/pusher/push-notifications-swift/commit/d6dfa2186195135d8d7d1e3d3efdd7f8661ea404">Swift 4.0+</a></li>
+<li><a href="https://itunes.apple.com/us/app/xcode/id497799835">Xcode</a> - The easiest way to get Xcode is from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>, but you can also download it from <a href="https://developer.apple.com/">developer.apple.com</a> if you have an AppleID registered with an Apple Developer account.</li>
+</ul>
+<h1 id='installation' class='heading'>Installation</h1>
+<h1 id='installation-with-cocoapods' class='heading'>Installation with CocoaPods</h1>
+
+<p>CocoaPods is a dependency manager for iOS, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:</p>
+<pre class="highlight ruby"><code><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
+</code></pre>
+
+<p>To integrate the MPush into your Xcode project using CocoaPods, specify it in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'10.0'</span>
+
+<span class="n">target</span> <span class="s1">'TargetName'</span> <span class="k">do</span>
+    <span class="n">use_frameworks!</span>
+
+    <span class="n">pod</span> <span class="s1">'MPush'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight plaintext"><code>$ pod install
+</code></pre>
+
+<p>CocoaPods is the preferred methot to install the library.</p>
+<h1 id='manual-installation' class='heading'>Manual installation</h1>
+
+<p>To install the library manually drag and drop the folder <code><a href="Classes/MPush.html">MPush</a></code> to your project structure in XCode. </p>
+
+<p>Note that <code><a href="Classes/MPush.html">MPush</a></code> has <code>Alamofire (4.0)</code> as dependency, so you have to install also this library.</p>
+<h1 id='usage' class='heading'>Usage</h1>
+
+<p>The first thig you have to do is implement Push Notifications using the <a href="https://developer.apple.com/documentation/usernotifications">UserNotifications</a> framework.</p>
+
+<blockquote>
+<p>You will be guided through all the steps needed to have a functional project wth the push notifications, if you have already done it you can skip to the <a href="#integrate-mpush">Integrate MPush</a> section of this README.</p>
+</blockquote>
+<h1 id='create-a-key' class='heading'>Create a key</h1>
+
+<p>Go to <a href="https://www.developer.apple.com">developer.apple.com</a> with an admin account and under Keys -&gt; All click the plus button in the top right corner.
+ Specify a name for your key and enable Apple Push Notifications service (APNs).</p>
+
+<p><img src="Images/Key-creation-1.png" alt="Key creation 1">
+<img src="Images/Key-creation-2.png" alt="Key creation 2"></p>
+
+<p>Then download the .p8 key file created and upload it in our <a href="https://mpush.app">dashboard</a>.</p>
+
+<blockquote>
+<p>Note that the key created is valid for all the apps of your profile and can&rsquo;t be re-downloaded, keep it in a safe place because you will likely have to resue it.</p>
+</blockquote>
+<h1 id='add-notifications-to-your-app' class='heading'>Add notifications to your app</h1>
+
+<p>Now go to your app settings under Identifier -&gt; AppId and enable the notifications services following the steps. After that you need to update the Provisioning Profile for your app or create a new one because push notifications donesn&rsquo;t work for applications signed with a wildcard Provisioning Profile.</p>
+
+<p>Now it&rsquo;s finally time to move to XCode. Open your project and enable push notifications in the capabilities tab.</p>
+
+<p><img src="Images/XCode-capabilities.png" alt="XCode-capabilities"></p>
+
+<p>In <code>AppDelegate.swift</code> add</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UserNotifications</span>
+
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="o">...</span>
+
+    <span class="k">let</span> <span class="nv">userNotificationCenter</span> <span class="o">=</span> <span class="kt">UNUserNotificationCenter</span><span class="o">.</span><span class="nf">current</span><span class="p">()</span>
+    <span class="n">userNotificationCenter</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="nf">registerForPushNotifications</span><span class="p">()</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="c1">// MARK: - Notifications</span>
+
+<span class="kd">func</span> <span class="nf">registerForPushNotifications</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">UNUserNotificationCenter</span><span class="o">.</span><span class="nf">current</span><span class="p">()</span><span class="o">.</span><span class="nf">requestAuthorization</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">alert</span><span class="p">,</span> <span class="o">.</span><span class="n">sound</span><span class="p">,</span> <span class="o">.</span><span class="n">badge</span><span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">granted</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">guard</span> <span class="n">granted</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">getNotificationSettings</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">getNotificationSettings</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">UNUserNotificationCenter</span><span class="o">.</span><span class="nf">current</span><span class="p">()</span><span class="o">.</span><span class="n">getNotificationSettings</span> <span class="p">{</span> <span class="p">(</span><span class="n">settings</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">guard</span> <span class="n">settings</span><span class="o">.</span><span class="n">authorizationStatus</span> <span class="o">==</span> <span class="o">.</span><span class="n">authorized</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+        <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+            <span class="kt">UIApplication</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">registerForRemoteNotifications</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UNUserNotificationCenterDelegate</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">UNUserNotificationCenter</span><span class="p">,</span>
+                                <span class="n">willPresent</span> <span class="nv">notification</span><span class="p">:</span> <span class="kt">UNNotification</span><span class="p">,</span>
+                                <span class="n">withCompletionHandler</span>
+                                <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">completionHandler</span><span class="p">(</span><span class="kt">UNNotificationPresentationOptions</span><span class="o">.</span><span class="n">alert</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">UNUserNotificationCenter</span><span class="p">,</span>
+                                <span class="n">didReceive</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">UNNotificationResponse</span><span class="p">,</span>
+                                <span class="n">withCompletionHandler</span>
+                                <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">completionHandler</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+<h1 id='integrate-mpush' class='heading'>Integrate MPush</h1>
+
+<p>To integrate MPush to your implementation you need to add this in your AppDelegate</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MPush</span>
+
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="kt">MPush</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="s">"YOUR_PUSH_TOKEN"</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="o">...</span>
+
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">MPush</span><span class="o">.</span><span class="nf">registerDevice</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="p">{</span>
+        <span class="kt">MPush</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="nv">toTopic</span><span class="p">:</span> <span class="s">"YOUR_TOPIC"</span><span class="p">)</span>
+        <span class="c1">// OR if you have more than one topic</span>
+        <span class="c1">// MPush.register(toTopics: ["TOPIC1", "TOPIC2"])</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+</code></pre>
+
+<p>You&rsquo;re set 🎉, the device will receive notifications for the topic is registered to. </p>
+<h1 id='rich-notifications' class='heading'>Rich Notifications</h1>
+
+<p>To implement rich notifications you will have to create a new Notificaiton Service Target that will be responsible for downloading the media of the notification and attach it to the notification object.</p>
+
+<p>In Xcode go to File -&gt; New -&gt; Target and choose Notification Service Extension</p>
+
+<blockquote>
+<p>Keep in mind that notifications don&rsquo;t have much time to download the media attached, if the dowload doen&rsquo;t finish in a short period of time the notification will be delivered without the media.</p>
+</blockquote>
+
+<p>To handle MPush attachments add this your <code>NotificationService</code> should look like this:</p>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">didReceive</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">UNNotificationRequest</span><span class="p">,</span> <span class="n">withContentHandler</span> <span class="nv">contentHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UNNotificationContent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">contentHandler</span> <span class="o">=</span> <span class="n">contentHandler</span>
+    <span class="n">bestAttemptContent</span> <span class="o">=</span> <span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">mutableCopy</span><span class="p">()</span> <span class="k">as?</span> <span class="kt">UNMutableNotificationContent</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">bestAttemptContent</span> <span class="o">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">mediaUrl</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">"media_url"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span><span class="p">,</span> <span class="k">let</span> <span class="nv">fileUrl</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">mediaUrl</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">downloadMedia</span><span class="p">(</span><span class="nv">fileUrl</span><span class="p">:</span> <span class="n">fileUrl</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">,</span> <span class="nv">bestAttemptContent</span><span class="p">:</span> <span class="n">bestAttemptContent</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">contentHandler</span><span class="p">(</span><span class="n">bestAttemptContent</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">contentHandler</span><span class="p">(</span><span class="n">bestAttemptContent</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">downloadMedia</span><span class="p">(</span><span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">UNNotificationRequest</span><span class="p">,</span> <span class="nv">bestAttemptContent</span><span class="p">:</span> <span class="kt">UNMutableNotificationContent</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">downloadTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">fileUrl</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">location</span> <span class="o">=</span> <span class="n">location</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">tmpDirectory</span> <span class="o">=</span> <span class="kt">NSTemporaryDirectory</span><span class="p">()</span>
+            <span class="k">let</span> <span class="nv">tmpFile</span> <span class="o">=</span> <span class="s">"file://"</span><span class="o">.</span><span class="nf">appending</span><span class="p">(</span><span class="n">tmpDirectory</span><span class="p">)</span><span class="o">.</span><span class="nf">appending</span><span class="p">(</span><span class="n">fileUrl</span><span class="o">.</span><span class="n">lastPathComponent</span><span class="p">)</span>
+            <span class="k">let</span> <span class="nv">tmpUrl</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">tmpFile</span><span class="p">)</span><span class="o">!</span>
+            <span class="k">do</span> <span class="p">{</span>
+                <span class="k">try</span> <span class="kt">FileManager</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">moveItem</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="n">location</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">tmpUrl</span><span class="p">)</span>
+
+                <span class="k">var</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+                <span class="k">if</span> <span class="k">let</span> <span class="nv">type</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">"media_type"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span> <span class="p">{</span>
+                    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]()</span>
+                    <span class="n">options</span><span class="p">?[</span><span class="kt">UNNotificationAttachmentOptionsTypeHintKey</span><span class="p">]</span> <span class="o">=</span> <span class="n">type</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="k">let</span> <span class="nv">attachment</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">UNNotificationAttachment</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"media."</span> <span class="o">+</span> <span class="n">fileUrl</span><span class="o">.</span><span class="n">pathExtension</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="n">tmpUrl</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">bestAttemptContent</span><span class="o">.</span><span class="n">attachments</span> <span class="o">=</span> <span class="p">[</span><span class="n">attachment</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">{}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">serviceExtensionTimeWillExpire</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Called just before the extension will be terminated by the system.</span>
+    <span class="c1">// Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">contentHandler</span> <span class="o">=</span> <span class="n">contentHandler</span><span class="p">,</span> <span class="k">let</span> <span class="nv">bestAttemptContent</span> <span class="o">=</span>  <span class="n">bestAttemptContent</span> <span class="p">{</span>
+        <span class="nf">contentHandler</span><span class="p">(</span><span class="n">bestAttemptContent</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>With this code we download the attachemnt, if exists, and move it to a temporary directory. Then we add it to our notification with </p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">attachment</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">UNNotificationAttachment</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"media."</span> <span class="o">+</span> <span class="n">fileUrl</span><span class="o">.</span><span class="n">pathExtension</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="n">tmpUrl</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">bestAttemptContent</span><span class="o">.</span><span class="n">attachments</span> <span class="o">=</span> <span class="p">[</span><span class="n">attachment</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
 <h1 id='license' class='heading'>License</h1>
 
-<p>MBurger is released under the MIT license. See <a href="LICENSE">LICENSE</a> for details.</p>
+<p>MPush is released under the MIT license. See <a href="LICENSE">LICENSE</a> for details.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-01-10)</p>
+          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-01-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
