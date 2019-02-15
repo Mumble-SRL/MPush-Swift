@@ -177,7 +177,8 @@ public class MPush: NSObject {
     ///
     /// - Returns: The default headers used to call the apis
     private static func defaultHeaders() -> [String: String] {
-        var headers = ["Accept": "application/json"]
+        var headers = ["Accept": "application/json",
+                       "X-MPush-Version": "2"]
         if let token = token {
             headers["X-MPush-Token"] = token
         }

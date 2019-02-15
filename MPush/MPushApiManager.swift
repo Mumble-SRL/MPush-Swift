@@ -108,25 +108,17 @@ internal class MPushApiManager: NSObject {
                 failure(error)
             }
         } else {
-            if let responseDict = json["response"] as? [String: Any] {
-                let statusCode = responseDict["status_code"] as? Int ?? -1
-                if statusCode == 0 {
-                    if let success = success {
-                        success(responseDict)
-                    }
-                } else {
-                    let message = responseDict["message_localized"] as? String ?? ""
-                    let error = MPushError(domain: "com.mumble.push",
-                                           code: response.response?.statusCode ?? 0,
-                                           message: message)
-                    if let failure = failure {
-                        failure(error)
-                    }
+            let responseDict = json
+            let statusCode = responseDict["status_code"] as? Int ?? -1
+            if statusCode == 0 {
+                if let success = success {
+                    success(responseDict)
                 }
             } else {
+                let message = responseDict["message"] as? String ?? ""
                 let error = MPushError(domain: "com.mumble.push",
                                        code: response.response?.statusCode ?? 0,
-                                       message: "Can't find response")
+                                       message: message)
                 if let failure = failure {
                     failure(error)
                 }
