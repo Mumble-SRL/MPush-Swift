@@ -30,7 +30,7 @@ platform :ios, '10.0'
 target 'TargetName' do
 	use_frameworks!
 
-    pod 'MPush-Swift'
+    pod 'MPushSwift'
 end
 ```
 
@@ -131,7 +131,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 To integrate MPush to your implementation you need to add this in your AppDelegate
 
 ```swift
-import MPush-Swift
+import MPushSwift
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     ...
