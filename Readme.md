@@ -30,7 +30,7 @@ platform :ios, '10.0'
 target 'TargetName' do
 	use_frameworks!
 
-    pod 'MPush'
+    pod 'MPush-Swift'
 end
 ```
 
@@ -46,7 +46,7 @@ CocoaPods is the preferred methot to install the library.
 
 To install the library manually drag and drop the folder `MPush` to your project structure in XCode. 
 
-Note that `MPush ` has `Alamofire (4.0)` as dependency, so you have to install also this library.
+Note that `MPush` has `Alamofire (4.0)` as dependency, so you have to install also this library.
 
 # Usage
 
@@ -131,7 +131,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 To integrate MPush to your implementation you need to add this in your AppDelegate
 
 ```swift
-import MPush
+import MPush-Swift
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     ...
