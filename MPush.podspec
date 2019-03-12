@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MPush"
-  s.version      = "0.2.2"
+  s.version      = "0.2.3"
   s.summary      = "MPush iOS SDK."
 
   # This description is used to generate tags and improve search results.
@@ -77,9 +77,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-iOS.git', :tag => '0.2.2'}
+  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-iOS.git', :tag => '0.2.3'}
   s.source_files = "MPush/*.{h,m,swift}"
-  s.swift_version = '>= 4.2, <= 5.0'
+  s.swift_version = '4.2'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
