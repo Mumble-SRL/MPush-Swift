@@ -131,7 +131,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 To integrate MPush to your implementation you need to add this in your AppDelegate
 
 ```swift
-import MPush-Swift
+import MPush_Swift
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     ...
