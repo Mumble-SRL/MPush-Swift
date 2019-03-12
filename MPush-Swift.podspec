@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MPush-Swift"
-  s.version      = "0.2.4"
+  s.version      = "0.2.5"
   s.summary      = "MPush iOS SDK."
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "MPush iOS SDK to integrate the MPush service in your app."
 
-  s.homepage     = "https://github.com/Mumble-SRL/MPush-iOS"
+  s.homepage     = "https://github.com/Mumble-SRL/MPush-Swift"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-iOS.git', :tag => '0.2.4'}
+  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-Swift.git', :tag => '0.2.5'}
   s.source_files = "MPush/*.{h,m,swift}"
   s.swift_version = '4.2'
 
