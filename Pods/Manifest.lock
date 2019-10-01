@@ -1,16 +1,21 @@
 PODS:
-  - Alamofire (4.8.1)
+  - MBNetworking (1.0.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - MBNetworking (from `https://gitlab.mumbleserver.it/iOS/mb-networking`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
+EXTERNAL SOURCES:
+  MBNetworking:
+    :git: https://gitlab.mumbleserver.it/iOS/mb-networking
+
+CHECKOUT OPTIONS:
+  MBNetworking:
+    :commit: 42d53442412ea657b06adaf278a2cc4f063fb9ca
+    :git: https://gitlab.mumbleserver.it/iOS/mb-networking
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  MBNetworking: 0865bee44b651dcde8a0aa458a0e81538695429e
 
-PODFILE CHECKSUM: 4da7151e36cb10e48aee5580369e45ba00dc9f3a
+PODFILE CHECKSUM: c95f7a2dccccf7202349687de3d1f7c3531299da
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.1

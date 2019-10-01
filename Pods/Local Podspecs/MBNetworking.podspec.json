@@ -1,0 +1,20 @@
+{
+  "name": "MBNetworking",
+  "version": "1.0.0",
+  "summary": "This is a really cool library, you can use cool features.",
+  "description": "This is a really cool library. This is the official internal MBNetworking library of MUMBLE Srl.",
+  "homepage": "https://mumbleideas.it/it/",
+  "license": "MIT",
+  "authors": {
+    "Alessandro Viviani": "alessandro.viviani@mumbleideas.it"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://gitlab.mumbleserver.it/iOS/mb-networking"
+  },
+  "source_files": "MBNetworking",
+  "swift_versions": "4.2",
+  "swift_version": "4.2"
+}
