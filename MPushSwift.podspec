@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-Swift.git', :tag => '0.2.6'}
+  s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush', :branch => 'MBNetworking'}
   s.source_files = "MPush/*.{h,m,swift}"
   s.swift_version = '4.2'
 
