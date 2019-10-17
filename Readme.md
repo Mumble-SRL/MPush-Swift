@@ -46,7 +46,7 @@ CocoaPods is the preferred methot to install the library.
 
 To install the library manually drag and drop the folder `MPush` to your project structure in XCode. 
 
-Note that `MPush` has `Alamofire (4.0)` as dependency, so you have to install also this library.
+Note that `MPush` has `MBNetworking (1.0)` as dependency, so you have to install also this library.
 
 # Usage
 
