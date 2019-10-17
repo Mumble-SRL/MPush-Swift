@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MBNetworking:
-    :commit: 42d53442412ea657b06adaf278a2cc4f063fb9ca
+    :commit: 1b1dbadb034d51b478c12fb995bb90184b8f3f26
     :git: https://gitlab.mumbleserver.it/iOS/mb-networking
 
 SPEC CHECKSUMS:
-  MBNetworking: 0865bee44b651dcde8a0aa458a0e81538695429e
+  MBNetworking: 5b094449a22d76d8dcf33c2c956dc130f49c15bf
 
 PODFILE CHECKSUM: c95f7a2dccccf7202349687de3d1f7c3531299da
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4

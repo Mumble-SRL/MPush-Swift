@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
 
   s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush', :branch => 'MBNetworking'}
   s.source_files = "MPush/*.{h,m,swift}"
-  s.swift_version = '4.2'
+  s.swift_version = '5'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

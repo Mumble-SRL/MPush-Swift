@@ -3,7 +3,8 @@
 //  MBNetworking
 //
 //  Created by Alessandro Viviani on 24/09/2019.
-//  Copyright © 2019 Alessadro Viviani. All rights reserved.
+//  Copyright © 2019 Mumble s.r.l. (https://mumbleideas.it/).
+//  All rights reserved.
 //
 
 import Foundation

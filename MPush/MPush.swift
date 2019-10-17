@@ -12,8 +12,8 @@ import UIKit
 /// The MPush class used to do all the interactions with the service
 public class MPush {
     
-    /// The token of MPush
-    public static var token: String?
+    /// The token of MPush, this cannot be empty. If so, MPush will throw an error.
+    public static var token: String = ""
     
     /// Register a device token
     ///
@@ -24,7 +24,7 @@ public class MPush {
     public static func registerDevice(deviceToken: Data,
                                       success: (() -> Void)? = nil,
                                       failure: ((_ error: Error?) -> Void)? = nil) {
-        precondition(!(token ?? "").isEmpty, tokenError().localizedDescription)
+        precondition(!token.isEmpty, tokenError().localizedDescription)
         
         let deviceTokenParts = deviceToken.map { data -> String in
             return String(format: "%02.2hhx", data)
@@ -67,7 +67,7 @@ public class MPush {
     public static func register(toTopics topics: [String],
                                 success: (() -> Void)? = nil,
                                 failure: ((_ error: Error?) -> Void)? = nil) {
-        precondition(!(token ?? "").isEmpty, tokenError().localizedDescription)
+        precondition(!token.isEmpty, tokenError().localizedDescription)
         
         var parameters = defaultParameters
         do {
@@ -108,7 +108,7 @@ public class MPush {
     public static func unregister(fromTopics topics: [String],
                                   success: (() -> Void)? = nil,
                                   failure: ((_ error: Error?) -> Void)? = nil) {
-        precondition(!(token ?? "").isEmpty, tokenError().localizedDescription)
+        precondition(!token.isEmpty, tokenError().localizedDescription)
         
         var parameters = defaultParameters
         do {
@@ -134,7 +134,7 @@ public class MPush {
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
     public static func unregisterFromAllTopics(success: (() -> Void)? = nil,
                                                failure: ((_ error: Error?) -> Void)? = nil) {
-        precondition(!(token ?? "").isEmpty, tokenError().localizedDescription)
+        precondition(!token.isEmpty, tokenError().localizedDescription)
         
         MPushApiManager.callApi(withName: "unregister-all",
                                 method: .post,
@@ -155,7 +155,7 @@ public class MPush {
     private static func defaultHeaders() -> [HTTPHeader] {
         var headers = [HTTPHeader(field: "Accept", value: "application/json"),
                        HTTPHeader(field: "X-MPush-Version", value: "2")]
-        if let token = token {
+        if !token.isEmpty {
             headers.append(HTTPHeader(field: "X-MPush-Token", value: token))
         }
         return headers

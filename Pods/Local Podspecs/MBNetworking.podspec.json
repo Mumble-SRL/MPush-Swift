@@ -9,12 +9,16 @@
     "Alessandro Viviani": "alessandro.viviani@mumbleideas.it"
   },
   "platforms": {
-    "ios": "11.0"
+    "ios": "10.0"
   },
   "source": {
     "git": "https://gitlab.mumbleserver.it/iOS/mb-networking"
   },
-  "source_files": "MBNetworking",
-  "swift_versions": "4.2",
-  "swift_version": "4.2"
+  "source_files": [
+    "MBNetworking/*.{h,m,swift}",
+    "MBNetworking/**/*.{h,m,swift}"
+  ],
+  "frameworks": "MobileCoreServices",
+  "swift_versions": "5",
+  "swift_version": "5"
 }

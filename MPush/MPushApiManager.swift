@@ -35,10 +35,10 @@ public struct MPushError: Error, LocalizedError, CustomStringConvertible {
 
 /// General class that calls the apis using MBNetworking
 internal class MPushApiManager {
-    static let baseUrl = "https://push.mumbleserver.it/api"
+    /// The URL used to do the api calls.
+    static private let baseUrl = "https://push.mumbleserver.it/api"
 
-    /// Calls a MPush api using Alamofire
-    ///
+    /// Calls a MPush api using MBNetworking
     /// - Parameters:
     ///   - name: the name of the api
     ///   - method: the HTTP method
@@ -64,10 +64,8 @@ internal class MPushApiManager {
     }
     
     /// Parses the response of the api and returns a dictionary or an error
-    ///
     /// - Parameters:
-    ///   - response: the response from Alamofire
-    ///   - json: the json returned from Alamofire
+    ///   - response: the response from MBNetworking
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and one argument: the response of the api as a dictionary.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
     private static func parseJsonResponse(response: MBResponse<Any>,
@@ -101,6 +99,11 @@ internal class MPushApiManager {
         }
     }
     
+    /// Parses the response in search of an error.
+    /// - Parameters:
+    ///   - json: A dictionary that contains the api response.
+    ///   - response: The HTTPURLResponse of the call, if present. Needed to create the status code of the error.
+    /// - Returns: If an error is found in the response, it returns the reason why the call is failed.
     private static func checkForErrors(in json: [String: Any], with response: HTTPURLResponse?) -> Error? {
         var message = ""
         guard let errors = json["errors"] as? [String: Any] else {
