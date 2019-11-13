@@ -1,5 +1,5 @@
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'MPush' do
-    pod 'Alamofire'
+  pod 'MBNetworking', git: 'https://gitlab.mumbleserver.it/iOS/mb-networking'
 end
