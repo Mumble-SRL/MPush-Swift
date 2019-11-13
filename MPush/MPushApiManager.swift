@@ -36,7 +36,7 @@ public struct MPushError: Error, LocalizedError, CustomStringConvertible {
 /// General class that calls the apis using MBNetworking
 internal class MPushApiManager {
     /// The URL used to do the api calls.
-    static private let baseUrl = "https://push.mumbleserver.it/api"
+    static private let baseUrl = "https://app.mpush.cloud/api"
 
     /// Calls a MPush api using MBNetworking
     /// - Parameters:
