@@ -12,6 +12,6 @@
 
 #import "MBNetworking.h"
 
-FOUNDATION_EXPORT double MBNetworkingVersionNumber;
-FOUNDATION_EXPORT const unsigned char MBNetworkingVersionString[];
+FOUNDATION_EXPORT double MBNetworkingSwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char MBNetworkingSwiftVersionString[];
 

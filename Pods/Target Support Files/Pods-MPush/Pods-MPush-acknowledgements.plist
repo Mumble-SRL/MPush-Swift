@@ -216,9 +216,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.</string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Apache</string>
 			<key>Title</key>
-			<string>MBNetworking</string>
+			<string>MBNetworkingSwift</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

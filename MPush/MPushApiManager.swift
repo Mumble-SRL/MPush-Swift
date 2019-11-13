@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import MBNetworking
+import MBNetworkingSwift
 
 /// An error of the MPush apis
 public struct MPushError: Error, LocalizedError, CustomStringConvertible {

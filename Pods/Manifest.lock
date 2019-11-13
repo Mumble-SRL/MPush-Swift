@@ -1,21 +1,16 @@
 PODS:
-  - MBNetworking (1.0.0)
+  - MBNetworkingSwift (1.0.5)
 
 DEPENDENCIES:
-  - MBNetworking (from `https://gitlab.mumbleserver.it/iOS/mb-networking`)
+  - MBNetworkingSwift
 
-EXTERNAL SOURCES:
-  MBNetworking:
-    :git: https://gitlab.mumbleserver.it/iOS/mb-networking
-
-CHECKOUT OPTIONS:
-  MBNetworking:
-    :commit: 1b1dbadb034d51b478c12fb995bb90184b8f3f26
-    :git: https://gitlab.mumbleserver.it/iOS/mb-networking
+SPEC REPOS:
+  trunk:
+    - MBNetworkingSwift
 
 SPEC CHECKSUMS:
-  MBNetworking: 5b094449a22d76d8dcf33c2c956dc130f49c15bf
+  MBNetworkingSwift: 98597079391834bbe57394eb94e7206707bdaa44
 
-PODFILE CHECKSUM: c95f7a2dccccf7202349687de3d1f7c3531299da
+PODFILE CHECKSUM: 31d3ad12f696dd8650c20c478ca2dfb69a932ca0
 
 COCOAPODS: 1.8.4

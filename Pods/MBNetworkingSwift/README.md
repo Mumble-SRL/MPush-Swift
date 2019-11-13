@@ -1,5 +1,5 @@
 <p align="center" >
-<img src="https://gitlab.mumbleserver.it/iOS/mb-networking/raw/master/Images/mumble-logo.gif" alt="MBurger Logo" title="Mumble Logo">
+<img src="https://raw.githubusercontent.com/Mumble-SRL/MBNetworkingSwift/master/Images/mumble-logo.gif" alt="MBurger Logo" title="Mumble Logo">
 </p>
 
 ![Test Status](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)
