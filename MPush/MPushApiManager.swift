@@ -35,7 +35,7 @@ public struct MPushError: Error, LocalizedError, CustomStringConvertible {
 
 /// General class that calls the apis using Alamofire
 internal class MPushApiManager: NSObject {
-    static let baseUrl = "https://push.mumbleserver.it/api"
+    static let baseUrl = "https://app.mpush.cloud/api"
 
     /// Calls a MPush api using Alamofire
     ///
