@@ -1,0 +1,6 @@
+module MBNetworkingSwift {
+  umbrella header "MBNetworkingSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

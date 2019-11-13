@@ -6,8 +6,8 @@
 //  All rights reserved.
 //
 
-import MBNetworking
 import UIKit
+import MBNetworkingSwift
 
 /// The MPush class used to do all the interactions with the service
 public class MPush {

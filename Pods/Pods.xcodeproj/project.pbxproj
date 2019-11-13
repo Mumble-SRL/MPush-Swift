@@ -7,67 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		118473FC3E8158A01D4E8A0ADAEE89A9 /* Pods-MPush-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DA0E8BF1E0645C96EAFD953DA532A7 /* Pods-MPush-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		70F1A0924DF9BAF7D206723822483E83 /* Pods-MPush-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6211CAFE38FE8CFE0C3A45FA0DBB0F9A /* Pods-MPush-dummy.m */; };
-		7DA5E008452B230CD34E0F7AD9CEBD7A /* MBNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78A0DB2050E0B61822FDE17104297D /* MBNetworking.swift */; };
-		8143663B88437BDD38A690A85CFDDFB7 /* MBParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD6A4EFE0A8DC02EE77450F2D46666 /* MBParameters.swift */; };
-		8BF243A1C29536E1E54B203F7163FD83 /* MBNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 378664C800BEF50FE155664BA1F4BD79 /* MBNetworking-dummy.m */; };
-		8DF1567B6997AB1CCBF14171DA0CDD00 /* MBNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A2CE755A4F5FC2AEEADF460C60BDB5BE /* MBNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8F632851FE6C107659010CE8204605B2 /* MBRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A596442C70E098CD17AF22E1B003D3 /* MBRequest.swift */; };
-		9A857BF4A32BF6CD34982EE825F2FECB /* MBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ACF0C9AF79A660D92B4FBE513BBBB /* MBError.swift */; };
-		A61E780F5E2A39BCED10C0670951E917 /* MBMulitpartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBDF04D79F60BD0B50BC0A594B08999 /* MBMulitpartFormData.swift */; };
-		B01A33DB3F163C9273FE9631A9050A54 /* MBResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FE122DE433CD002E9F4D8AA17EFE5C /* MBResult.swift */; };
-		B24509FE6E1FD950C6A5BC3FF535A78B /* MBValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3924979FF021ED35E15AA904BA418 /* MBValidation.swift */; };
-		C0CB421B372E8F3A236C824CDABA30C0 /* MBNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 582E0C19769BC9F66ECE78737AD1040D /* MBNetworking-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CF1F163C889724D60785766DE3DBC51A /* MBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D400CFC79DE92616CE8E15AB75DC341 /* MBResponse.swift */; };
+		11C1B22793227FB446DD10CA7B370EDD /* Pods-MPush-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6211CAFE38FE8CFE0C3A45FA0DBB0F9A /* Pods-MPush-dummy.m */; };
+		140F86D486046AEE8784B9AA6CFBF8C1 /* MBNetworkingSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFC82CA7F7637E997256F09776DBED1 /* MBNetworkingSwift-dummy.m */; };
+		173BFF2C191BBC8C594114A1C622CBC7 /* MBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC34900115017EF90BF50BFF586C074 /* MBResponse.swift */; };
+		3E42E16D8363BDC68D29CEA5E01DB698 /* MBParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B298F617A766B968AB015CD93E0638 /* MBParameters.swift */; };
+		438469C35CAD2B378F91591B5E4A133D /* MBNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0C405679C8D47E4ACB8DF37363069 /* MBNetworking.swift */; };
+		93E1D89E240773D1B42256A0ED40C8BE /* MBRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0750CEB2C9A17308AE6CDA8E99CF86 /* MBRequest.swift */; };
+		A9205FC9E31C13494FF9DB86C2F3BEA7 /* MBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6496A3083635DD94DB487D2092E7EBA /* MBError.swift */; };
+		AB67BC9B50A5CD57E147D06A145A8BCD /* Pods-MPush-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DA0E8BF1E0645C96EAFD953DA532A7 /* Pods-MPush-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD74B648C5D4CC2489FE6810572DB49D /* MBResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938FE514F91C98D4507DE5765BDFD03 /* MBResult.swift */; };
+		BC456508732520A990AEBBA7A87BC6DD /* MBMulitpartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62840AB15400B1E01911CAAA00DB3C9 /* MBMulitpartFormData.swift */; };
+		C0A33A07FB4042955AF6F1F587CA6461 /* MBNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 14FB1CDB4DF073A8463425FAC8DB6C85 /* MBNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F100EC78D543850E344FE961A5B96F4A /* MBValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8C01822B1BDEF1F6AD684858A6EAF0 /* MBValidation.swift */; };
+		FE6BE744509A39ED0803A50FE8FF063D /* MBNetworkingSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 985A4D175ECF6067882B459E52F20DD1 /* MBNetworkingSwift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7BD6541EA07B4D33D4EC11C7CEFD4DE9 /* PBXContainerItemProxy */ = {
+		8A45F201ACED84E1C0DC5EE5AE92CA64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F7FE9DD8E273782D9617F1CF0918C7D7;
-			remoteInfo = MBNetworking;
+			remoteGlobalIDString = 761641A2390A4CA7AEB55C51CA789C90;
+			remoteInfo = MBNetworkingSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0938FE514F91C98D4507DE5765BDFD03 /* MBResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBResult.swift; path = MBNetworking/MBResult.swift; sourceTree = "<group>"; };
 		11ECF1CC9357CF7AF7AD6EC9361A33DF /* Pods-MPush.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MPush.modulemap"; sourceTree = "<group>"; };
-		31A596442C70E098CD17AF22E1B003D3 /* MBRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBRequest.swift; path = MBNetworking/MBRequest.swift; sourceTree = "<group>"; };
+		14FB1CDB4DF073A8463425FAC8DB6C85 /* MBNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBNetworking.h; path = MBNetworking/MBNetworking.h; sourceTree = "<group>"; };
+		1E0750CEB2C9A17308AE6CDA8E99CF86 /* MBRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBRequest.swift; path = MBNetworking/MBRequest.swift; sourceTree = "<group>"; };
+		317C42D6BB11FFDF58B1B1743963B344 /* libMBNetworkingSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBNetworkingSwift.a; path = libMBNetworkingSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DA0E8BF1E0645C96EAFD953DA532A7 /* Pods-MPush-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MPush-umbrella.h"; sourceTree = "<group>"; };
 		377CB9697F7C1EC5E4862F176DE3691D /* Pods-MPush-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MPush-acknowledgements.markdown"; sourceTree = "<group>"; };
-		378664C800BEF50FE155664BA1F4BD79 /* MBNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBNetworking-dummy.m"; sourceTree = "<group>"; };
+		3EA0C405679C8D47E4ACB8DF37363069 /* MBNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBNetworking.swift; path = MBNetworking/MBNetworking.swift; sourceTree = "<group>"; };
+		47B3D8C67B41E92AD8900E3970269FFB /* MBNetworkingSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBNetworkingSwift.xcconfig; sourceTree = "<group>"; };
+		4A0CD611DE340BB0E9F45C1DA7FC0769 /* MBNetworkingSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBNetworkingSwift-prefix.pch"; sourceTree = "<group>"; };
 		4B2E71231F6C2E7B09A5416F0350C29A /* Pods-MPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MPush.release.xcconfig"; sourceTree = "<group>"; };
-		4E8014223B76427BD33F2D2EC2113004 /* MBNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBNetworking-prefix.pch"; sourceTree = "<group>"; };
-		500ACF0C9AF79A660D92B4FBE513BBBB /* MBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBError.swift; path = MBNetworking/MBError.swift; sourceTree = "<group>"; };
-		582E0C19769BC9F66ECE78737AD1040D /* MBNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBNetworking-umbrella.h"; sourceTree = "<group>"; };
 		6211CAFE38FE8CFE0C3A45FA0DBB0F9A /* Pods-MPush-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MPush-dummy.m"; sourceTree = "<group>"; };
-		6B14ED66E7D75165AE1CB02E2F76321D /* MBNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBNetworking.modulemap; sourceTree = "<group>"; };
-		7D400CFC79DE92616CE8E15AB75DC341 /* MBResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBResponse.swift; path = MBNetworking/MBResponse.swift; sourceTree = "<group>"; };
+		72B298F617A766B968AB015CD93E0638 /* MBParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBParameters.swift; path = MBNetworking/MBParameters.swift; sourceTree = "<group>"; };
+		8AFC82CA7F7637E997256F09776DBED1 /* MBNetworkingSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBNetworkingSwift-dummy.m"; sourceTree = "<group>"; };
+		8CC34900115017EF90BF50BFF586C074 /* MBResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBResponse.swift; path = MBNetworking/MBResponse.swift; sourceTree = "<group>"; };
+		985A4D175ECF6067882B459E52F20DD1 /* MBNetworkingSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBNetworkingSwift-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2CE755A4F5FC2AEEADF460C60BDB5BE /* MBNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBNetworking.h; path = MBNetworking/MBNetworking.h; sourceTree = "<group>"; };
 		A956991862DE880465A2E5C8BCFEC9CC /* Pods-MPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MPush.debug.xcconfig"; sourceTree = "<group>"; };
-		AEBD6A4EFE0A8DC02EE77450F2D46666 /* MBParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBParameters.swift; path = MBNetworking/MBParameters.swift; sourceTree = "<group>"; };
-		C4A3F7B243DD0397F1913835F35CF1E3 /* libMBNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBNetworking.a; path = libMBNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBC3924979FF021ED35E15AA904BA418 /* MBValidation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBValidation.swift; path = MBNetworking/MBValidation.swift; sourceTree = "<group>"; };
+		D22D849ED89C43FF87F9D39428EE3A40 /* MBNetworkingSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBNetworkingSwift.modulemap; sourceTree = "<group>"; };
 		D56C661A14AB28B503B7820719D6A2E4 /* Pods-MPush-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MPush-acknowledgements.plist"; sourceTree = "<group>"; };
+		D62840AB15400B1E01911CAAA00DB3C9 /* MBMulitpartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBMulitpartFormData.swift; path = MBNetworking/MBMulitpartFormData.swift; sourceTree = "<group>"; };
 		DF091A3E0B9339CA9D92CA843AEB66AA /* libPods-MPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MPush.a"; path = "libPods-MPush.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4FE122DE433CD002E9F4D8AA17EFE5C /* MBResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBResult.swift; path = MBNetworking/MBResult.swift; sourceTree = "<group>"; };
-		EE78A0DB2050E0B61822FDE17104297D /* MBNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBNetworking.swift; path = MBNetworking/MBNetworking.swift; sourceTree = "<group>"; };
-		F945EB4A6ABB26DB8FD3D9BABD29962C /* MBNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBNetworking.xcconfig; sourceTree = "<group>"; };
-		FEBDF04D79F60BD0B50BC0A594B08999 /* MBMulitpartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBMulitpartFormData.swift; path = MBNetworking/MBMulitpartFormData.swift; sourceTree = "<group>"; };
+		E6496A3083635DD94DB487D2092E7EBA /* MBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBError.swift; path = MBNetworking/MBError.swift; sourceTree = "<group>"; };
+		EB8C01822B1BDEF1F6AD684858A6EAF0 /* MBValidation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBValidation.swift; path = MBNetworking/MBValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E097A983CDF29B3FC41C25EE06549B7 /* Frameworks */ = {
+		03136BC4DA684D082F3319F660DA4C23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9E2FB7195985B66ECB236167BDD2243 /* Frameworks */ = {
+		9F66E1EE71AC936E20AB220A6741B200 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,21 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		216F06924B700003B863274F90AF4649 /* Products */ = {
+		4E5DB807D4A94F2E138081689567032F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4A3F7B243DD0397F1913835F35CF1E3 /* libMBNetworking.a */,
+				317C42D6BB11FFDF58B1B1743963B344 /* libMBNetworkingSwift.a */,
 				DF091A3E0B9339CA9D92CA843AEB66AA /* libPods-MPush.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5C623243C421FC0A8986C4EDE88FE6DC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EE8C0EA0F932F10B4D86C44364EAF2C1 /* MBNetworking */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		A2601B320BCC76B46F90FF10F975AD5C /* Targets Support Files */ = {
@@ -102,17 +94,17 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BD5B542C33A39F292A978968E538A507 /* Support Files */ = {
+		C9CDA9B5DAA55BE457C37DEF1017A9EE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6B14ED66E7D75165AE1CB02E2F76321D /* MBNetworking.modulemap */,
-				F945EB4A6ABB26DB8FD3D9BABD29962C /* MBNetworking.xcconfig */,
-				378664C800BEF50FE155664BA1F4BD79 /* MBNetworking-dummy.m */,
-				4E8014223B76427BD33F2D2EC2113004 /* MBNetworking-prefix.pch */,
-				582E0C19769BC9F66ECE78737AD1040D /* MBNetworking-umbrella.h */,
+				D22D849ED89C43FF87F9D39428EE3A40 /* MBNetworkingSwift.modulemap */,
+				47B3D8C67B41E92AD8900E3970269FFB /* MBNetworkingSwift.xcconfig */,
+				8AFC82CA7F7637E997256F09776DBED1 /* MBNetworkingSwift-dummy.m */,
+				4A0CD611DE340BB0E9F45C1DA7FC0769 /* MBNetworkingSwift-prefix.pch */,
+				985A4D175ECF6067882B459E52F20DD1 /* MBNetworkingSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MBNetworking";
+			path = "../Target Support Files/MBNetworkingSwift";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -120,8 +112,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				5C623243C421FC0A8986C4EDE88FE6DC /* Pods */,
-				216F06924B700003B863274F90AF4649 /* Products */,
+				FFE337CA1B0F6EC916C3A1A9A463030E /* Pods */,
+				4E5DB807D4A94F2E138081689567032F /* Products */,
 				A2601B320BCC76B46F90FF10F975AD5C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -133,22 +125,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EE8C0EA0F932F10B4D86C44364EAF2C1 /* MBNetworking */ = {
+		F80B424DC90750F092AC5C4401ED8C38 /* MBNetworkingSwift */ = {
 			isa = PBXGroup;
 			children = (
-				500ACF0C9AF79A660D92B4FBE513BBBB /* MBError.swift */,
-				FEBDF04D79F60BD0B50BC0A594B08999 /* MBMulitpartFormData.swift */,
-				A2CE755A4F5FC2AEEADF460C60BDB5BE /* MBNetworking.h */,
-				EE78A0DB2050E0B61822FDE17104297D /* MBNetworking.swift */,
-				AEBD6A4EFE0A8DC02EE77450F2D46666 /* MBParameters.swift */,
-				31A596442C70E098CD17AF22E1B003D3 /* MBRequest.swift */,
-				7D400CFC79DE92616CE8E15AB75DC341 /* MBResponse.swift */,
-				E4FE122DE433CD002E9F4D8AA17EFE5C /* MBResult.swift */,
-				CBC3924979FF021ED35E15AA904BA418 /* MBValidation.swift */,
-				BD5B542C33A39F292A978968E538A507 /* Support Files */,
+				E6496A3083635DD94DB487D2092E7EBA /* MBError.swift */,
+				D62840AB15400B1E01911CAAA00DB3C9 /* MBMulitpartFormData.swift */,
+				14FB1CDB4DF073A8463425FAC8DB6C85 /* MBNetworking.h */,
+				3EA0C405679C8D47E4ACB8DF37363069 /* MBNetworking.swift */,
+				72B298F617A766B968AB015CD93E0638 /* MBParameters.swift */,
+				1E0750CEB2C9A17308AE6CDA8E99CF86 /* MBRequest.swift */,
+				8CC34900115017EF90BF50BFF586C074 /* MBResponse.swift */,
+				0938FE514F91C98D4507DE5765BDFD03 /* MBResult.swift */,
+				EB8C01822B1BDEF1F6AD684858A6EAF0 /* MBValidation.swift */,
+				C9CDA9B5DAA55BE457C37DEF1017A9EE /* Support Files */,
 			);
-			name = MBNetworking;
-			path = MBNetworking;
+			name = MBNetworkingSwift;
+			path = MBNetworkingSwift;
 			sourceTree = "<group>";
 		};
 		FC5A4BA0C0A8326790688041E7A1DBAE /* Pods-MPush */ = {
@@ -166,63 +158,71 @@
 			path = "Target Support Files/Pods-MPush";
 			sourceTree = "<group>";
 		};
+		FFE337CA1B0F6EC916C3A1A9A463030E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F80B424DC90750F092AC5C4401ED8C38 /* MBNetworkingSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		067732A2D3C9E9CD0C012FFC762E4AC6 /* Headers */ = {
+		1189BDAB251CC59C356FFA020BBB343D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0CB421B372E8F3A236C824CDABA30C0 /* MBNetworking-umbrella.h in Headers */,
-				8DF1567B6997AB1CCBF14171DA0CDD00 /* MBNetworking.h in Headers */,
+				C0A33A07FB4042955AF6F1F587CA6461 /* MBNetworking.h in Headers */,
+				FE6BE744509A39ED0803A50FE8FF063D /* MBNetworkingSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF6896E21B36CB000205F5913EB97581 /* Headers */ = {
+		5E1E5DBCC200F4BDB6C178C84B5B6FB3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118473FC3E8158A01D4E8A0ADAEE89A9 /* Pods-MPush-umbrella.h in Headers */,
+				AB67BC9B50A5CD57E147D06A145A8BCD /* Pods-MPush-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F0FA6865AF5449B41968C080E99560DA /* Pods-MPush */ = {
+		761641A2390A4CA7AEB55C51CA789C90 /* MBNetworkingSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 999A1F61698A4ADAE30ABB1ACAFA29B7 /* Build configuration list for PBXNativeTarget "Pods-MPush" */;
+			buildConfigurationList = 396C219279BCC7A4FD2A120436B73355 /* Build configuration list for PBXNativeTarget "MBNetworkingSwift" */;
 			buildPhases = (
-				FF6896E21B36CB000205F5913EB97581 /* Headers */,
-				9E4377433FD00DF1CF3B7C4424227546 /* Sources */,
-				C9E2FB7195985B66ECB236167BDD2243 /* Frameworks */,
+				1189BDAB251CC59C356FFA020BBB343D /* Headers */,
+				93EC4F77A19F2F74D1DE6D794CC4AC30 /* Sources */,
+				03136BC4DA684D082F3319F660DA4C23 /* Frameworks */,
+				1D71EE3A61CD35823EA66DEC3120532B /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				647BE8FDC1E999EFDBA9BB8F4FE4A52B /* PBXTargetDependency */,
+			);
+			name = MBNetworkingSwift;
+			productName = MBNetworkingSwift;
+			productReference = 317C42D6BB11FFDF58B1B1743963B344 /* libMBNetworkingSwift.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F0FA6865AF5449B41968C080E99560DA /* Pods-MPush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FABBF66CE0220163DCA2FE072F9B8C /* Build configuration list for PBXNativeTarget "Pods-MPush" */;
+			buildPhases = (
+				5E1E5DBCC200F4BDB6C178C84B5B6FB3 /* Headers */,
+				C78125D1F6ABB8C715F66B0E0FBBA3B8 /* Sources */,
+				9F66E1EE71AC936E20AB220A6741B200 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				194C07119808B5595265D5756C788480 /* PBXTargetDependency */,
 			);
 			name = "Pods-MPush";
 			productName = "Pods-MPush";
 			productReference = DF091A3E0B9339CA9D92CA843AEB66AA /* libPods-MPush.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		F7FE9DD8E273782D9617F1CF0918C7D7 /* MBNetworking */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 06FA62B587BA6F0B79239513FE0F1293 /* Build configuration list for PBXNativeTarget "MBNetworking" */;
-			buildPhases = (
-				067732A2D3C9E9CD0C012FFC762E4AC6 /* Headers */,
-				CBF5E67AFC62136F310B04AADEE430C1 /* Sources */,
-				8E097A983CDF29B3FC41C25EE06549B7 /* Frameworks */,
-				9F65B202BD5FBB65CF5DCB9386CFE63B /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MBNetworking;
-			productName = MBNetworking;
-			productReference = C4A3F7B243DD0397F1913835F35CF1E3 /* libMBNetworking.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -240,20 +240,21 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 216F06924B700003B863274F90AF4649 /* Products */;
+			productRefGroup = 4E5DB807D4A94F2E138081689567032F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7FE9DD8E273782D9617F1CF0918C7D7 /* MBNetworking */,
+				761641A2390A4CA7AEB55C51CA789C90 /* MBNetworkingSwift */,
 				F0FA6865AF5449B41968C080E99560DA /* Pods-MPush */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9F65B202BD5FBB65CF5DCB9386CFE63B /* Copy generated compatibility header */ = {
+		1D71EE3A61CD35823EA66DEC3120532B /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,87 +263,60 @@
 			);
 			inputPaths = (
 				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/MBNetworking/MBNetworking.modulemap",
-				"${PODS_ROOT}/Headers/Public/MBNetworking/MBNetworking-umbrella.h",
+				"${PODS_ROOT}/Headers/Public/MBNetworkingSwift/MBNetworkingSwift.modulemap",
+				"${PODS_ROOT}/Headers/Public/MBNetworkingSwift/MBNetworkingSwift-umbrella.h",
 			);
 			name = "Copy generated compatibility header";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/MBNetworking-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/MBNetworkingSwift-umbrella.h",
 				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MBNetworking/MBNetworking.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MBNetworking/MBNetworking-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MBNetworkingSwift/MBNetworkingSwift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MBNetworkingSwift/MBNetworkingSwift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9E4377433FD00DF1CF3B7C4424227546 /* Sources */ = {
+		93EC4F77A19F2F74D1DE6D794CC4AC30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F1A0924DF9BAF7D206723822483E83 /* Pods-MPush-dummy.m in Sources */,
+				A9205FC9E31C13494FF9DB86C2F3BEA7 /* MBError.swift in Sources */,
+				BC456508732520A990AEBBA7A87BC6DD /* MBMulitpartFormData.swift in Sources */,
+				438469C35CAD2B378F91591B5E4A133D /* MBNetworking.swift in Sources */,
+				140F86D486046AEE8784B9AA6CFBF8C1 /* MBNetworkingSwift-dummy.m in Sources */,
+				3E42E16D8363BDC68D29CEA5E01DB698 /* MBParameters.swift in Sources */,
+				93E1D89E240773D1B42256A0ED40C8BE /* MBRequest.swift in Sources */,
+				173BFF2C191BBC8C594114A1C622CBC7 /* MBResponse.swift in Sources */,
+				AD74B648C5D4CC2489FE6810572DB49D /* MBResult.swift in Sources */,
+				F100EC78D543850E344FE961A5B96F4A /* MBValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBF5E67AFC62136F310B04AADEE430C1 /* Sources */ = {
+		C78125D1F6ABB8C715F66B0E0FBBA3B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A857BF4A32BF6CD34982EE825F2FECB /* MBError.swift in Sources */,
-				A61E780F5E2A39BCED10C0670951E917 /* MBMulitpartFormData.swift in Sources */,
-				8BF243A1C29536E1E54B203F7163FD83 /* MBNetworking-dummy.m in Sources */,
-				7DA5E008452B230CD34E0F7AD9CEBD7A /* MBNetworking.swift in Sources */,
-				8143663B88437BDD38A690A85CFDDFB7 /* MBParameters.swift in Sources */,
-				8F632851FE6C107659010CE8204605B2 /* MBRequest.swift in Sources */,
-				CF1F163C889724D60785766DE3DBC51A /* MBResponse.swift in Sources */,
-				B01A33DB3F163C9273FE9631A9050A54 /* MBResult.swift in Sources */,
-				B24509FE6E1FD950C6A5BC3FF535A78B /* MBValidation.swift in Sources */,
+				11C1B22793227FB446DD10CA7B370EDD /* Pods-MPush-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		647BE8FDC1E999EFDBA9BB8F4FE4A52B /* PBXTargetDependency */ = {
+		194C07119808B5595265D5756C788480 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MBNetworking;
-			target = F7FE9DD8E273782D9617F1CF0918C7D7 /* MBNetworking */;
-			targetProxy = 7BD6541EA07B4D33D4EC11C7CEFD4DE9 /* PBXContainerItemProxy */;
+			name = MBNetworkingSwift;
+			target = 761641A2390A4CA7AEB55C51CA789C90 /* MBNetworkingSwift */;
+			targetProxy = 8A45F201ACED84E1C0DC5EE5AE92CA64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		033B8B82F00DEE00D07B8D5B27123D32 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F945EB4A6ABB26DB8FD3D9BABD29962C /* MBNetworking.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MBNetworking/MBNetworking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/MBNetworking/MBNetworking.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MBNetworking;
-				PRODUCT_NAME = MBNetworking;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,7 +377,7 @@
 			};
 			name = Release;
 		};
-		266EF919F8278FBFCF5C383127DA4460 /* Release */ = {
+		7FFBB4714D6849A27627AE729F050B43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B2E71231F6C2E7B09A5416F0350C29A /* Pods-MPush.release.xcconfig */;
 			buildSettings = {
@@ -427,7 +401,33 @@
 			};
 			name = Release;
 		};
-		5F2DBA1184557BF8920100309E256A7A /* Debug */ = {
+		97950F5821087FAEF68F8E822EC58CDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B3D8C67B41E92AD8900E3970269FFB /* MBNetworkingSwift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBNetworkingSwift/MBNetworkingSwift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/MBNetworkingSwift/MBNetworkingSwift.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBNetworkingSwift;
+				PRODUCT_NAME = MBNetworkingSwift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D2B9DFE3429BB9B3787BC20C2EA5F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A956991862DE880465A2E5C8BCFEC9CC /* Pods-MPush.debug.xcconfig */;
 			buildSettings = {
@@ -450,31 +450,32 @@
 			};
 			name = Debug;
 		};
-		BF542035433B1AB5033A9AE021311C9C /* Debug */ = {
+		DADF441B03DF8F63193A40A74C11CDFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F945EB4A6ABB26DB8FD3D9BABD29962C /* MBNetworking.xcconfig */;
+			baseConfigurationReference = 47B3D8C67B41E92AD8900E3970269FFB /* MBNetworkingSwift.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MBNetworking/MBNetworking-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/MBNetworkingSwift/MBNetworkingSwift-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/MBNetworking/MBNetworking.modulemap;
+				MODULEMAP_FILE = Headers/Public/MBNetworkingSwift/MBNetworkingSwift.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MBNetworking;
-				PRODUCT_NAME = MBNetworking;
+				PRODUCT_MODULE_NAME = MBNetworkingSwift;
+				PRODUCT_NAME = MBNetworkingSwift;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -543,11 +544,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06FA62B587BA6F0B79239513FE0F1293 /* Build configuration list for PBXNativeTarget "MBNetworking" */ = {
+		396C219279BCC7A4FD2A120436B73355 /* Build configuration list for PBXNativeTarget "MBNetworkingSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF542035433B1AB5033A9AE021311C9C /* Debug */,
-				033B8B82F00DEE00D07B8D5B27123D32 /* Release */,
+				97950F5821087FAEF68F8E822EC58CDA /* Debug */,
+				DADF441B03DF8F63193A40A74C11CDFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -561,11 +562,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		999A1F61698A4ADAE30ABB1ACAFA29B7 /* Build configuration list for PBXNativeTarget "Pods-MPush" */ = {
+		91FABBF66CE0220163DCA2FE072F9B8C /* Build configuration list for PBXNativeTarget "Pods-MPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5F2DBA1184557BF8920100309E256A7A /* Debug */,
-				266EF919F8278FBFCF5C383127DA4460 /* Release */,
+				9D2B9DFE3429BB9B3787BC20C2EA5F75 /* Debug */,
+				7FFBB4714D6849A27627AE729F050B43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
