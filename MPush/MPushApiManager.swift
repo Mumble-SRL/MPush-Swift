@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Alamofire
+import MBNetworking
 
 /// An error of the MPush apis
 public struct MPushError: Error, LocalizedError, CustomStringConvertible {
@@ -33,12 +33,12 @@ public struct MPushError: Error, LocalizedError, CustomStringConvertible {
     }
 }
 
-/// General class that calls the apis using Alamofire
-internal class MPushApiManager: NSObject {
-    static let baseUrl = "https://app.mpush.cloud/api"
+/// General class that calls the apis using MBNetworking
+internal class MPushApiManager {
+    /// The URL used to do the api calls.
+    static private let baseUrl = "https://push.mumbleserver.it/api"
 
-    /// Calls a MPush api using Alamofire
-    ///
+    /// Calls a MPush api using MBNetworking
     /// - Parameters:
     ///   - name: the name of the api
     ///   - method: the HTTP method
@@ -46,83 +46,81 @@ internal class MPushApiManager: NSObject {
     ///   - headers: the headers passed to the api
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and one argument: the response of the api.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
+    
     internal static func callApi(withName name: String,
                                  method: HTTPMethod,
-                                 parameters: [String: Any]?,
-                                 headers: [String: String]?,
+                                 parameters: Parameters?,
+                                 headers: [HTTPHeader]?,
                                  success: ((_ response: [String: Any]) -> Void)? = nil,
                                  failure: ((_ error: Error?) -> Void)? = nil) {
         let completeUrlString = baseUrl + "/" + name
-        if let url = URL(string: completeUrlString) {
-            Alamofire.request(url, method: method, parameters: parameters, headers: headers).responseJSON { (response) in
-                switch response.result {
-                case .success:
-                    if let json = response.result.value as? [String: Any] {
-                        self.parseJsonResponse(response: response, json: json, success: success, failure: failure)
-                    } else {
-                        if let failure = failure {
-                            failure(response.error)
-                        }
-                    }
-                case .failure(let error):
-                    if let failure = failure {
-                        failure(error)
-                    }
-                }
-            }
-        } else {
-            if let failure = failure {
-                failure(MPushError(domain: "com.mumble.push",
-                                   code: 101,
-                                   message: "URL(\(completeUrlString) is in the wrong format"))
-            }
+        MBNetworking.request(withUrl: completeUrlString,
+                             method: method,
+                             headers: headers,
+                             parameters: parameters,
+                             encoding: JSONParameterEncoder.default) { response in
+                                parseJsonResponse(response: response, success: success, failure: failure)
         }
     }
     
     /// Parses the response of the api and returns a dictionary or an error
-    ///
     /// - Parameters:
-    ///   - response: the response from Alamofire
-    ///   - json: the json returned from Alamofire
+    ///   - response: the response from MBNetworking
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and one argument: the response of the api as a dictionary.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    private static func parseJsonResponse(response: DataResponse<Any>,
-                                          json: [String: Any],
+    private static func parseJsonResponse(response: MBResponse<Any>,
                                           success: ((_ response: [String: Any]) -> Void)?,
-                                          failure: ((_ error: Error?) -> Void)?) {
-        var message = ""
-        if let errors = json["errors"] as? [String: Any] {
-            for key in errors.keys {
-                if let errorsArray = errors[key] as? [String] {
-                    if message == "" {
-                        message += "\(errorsArray.joined(separator: "\n"))"
-                    } else {
-                        message += "\n\(errorsArray.joined(separator: "\n"))"
-                    }
+                                          failure: ((_ error: Error) -> Void)?) {
+        switch response.result {
+        case .success(let responseDictionary):
+            guard let json = responseDictionary as? [String: Any] else {
+                if let failure = failure {
+                    failure(MPushError(domain: "com.mumble.push",
+                                       code: 9000,
+                                       message: "could't cast response to Dictionary")
+                    )
                 }
+                return
             }
-            if let failure = failure {
-                let error = MPushError(domain: "com.mumble.push",
-                                       code: response.response?.statusCode ?? 0,
-                                       message: message)
-                failure(error)
-            }
-        } else {
-            let responseDict = json
-            let statusCode = responseDict["status_code"] as? Int ?? -1
-            if statusCode == 0 {
-                if let success = success {
-                    success(responseDict)
-                }
-            } else {
-                let message = responseDict["message"] as? String ?? ""
-                let error = MPushError(domain: "com.mumble.push",
-                                       code: response.response?.statusCode ?? 0,
-                                       message: message)
+            
+            if let error = checkForErrors(in: json, with: response.response) {
                 if let failure = failure {
                     failure(error)
                 }
+            } else {
+                if let success = success {
+                    success(json)
+                }
+            }
+        case .error(let error):
+            if let failure = failure {
+                failure(error)
             }
         }
+    }
+    
+    /// Parses the response in search of an error.
+    /// - Parameters:
+    ///   - json: A dictionary that contains the api response.
+    ///   - response: The HTTPURLResponse of the call, if present. Needed to create the status code of the error.
+    /// - Returns: If an error is found in the response, it returns the reason why the call is failed.
+    private static func checkForErrors(in json: [String: Any], with response: HTTPURLResponse?) -> Error? {
+        var message = ""
+        guard let errors = json["errors"] as? [String: Any] else {
+            return nil }
+        
+        for key in errors.keys {
+            if let errorsArray = errors[key] as? [String] {
+                if message == "" {
+                    message += "\(errorsArray.joined(separator: "\n"))"
+                } else {
+                    message += "\n\(errorsArray.joined(separator: "\n"))"
+                }
+            }
+        }
+        
+        return MPushError(domain: "com.mumble.push",
+                          code: response?.statusCode ?? 0,
+                          message: message)
     }
 }

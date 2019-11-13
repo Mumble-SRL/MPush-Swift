@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MPushSwift"
-  s.version      = "0.2.7"
+  s.version      = "0.2.6"
   s.summary      = "MPush iOS SDK."
 
   # This description is used to generate tags and improve search results.
@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  s.ios.deployment_target = "10.0"
+  s.ios.deployment_target = "11.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -77,9 +77,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { git: 'https://github.com/Mumble-SRL/MPush-Swift.git', :tag => '0.2.7'}
+  s.source       = { git: 'https://gitlab.mumbleserver.it/iOS/MumblePush', :branch => 'MBNetworking'}
   s.source_files = "MPush/*.{h,m,swift}"
-  s.swift_version = '4.2'
+  s.swift_version = '5'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -119,7 +119,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-  s.dependency 'Alamofire', '~> 4.0'
+  s.dependency 'MBNetworking'
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
