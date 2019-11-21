@@ -178,7 +178,7 @@ override func didReceive(_ request: UNNotificationRequest, withContentHandler co
     }
 }
     
-func downloadMedia(fileUrl: URL, request: UNNotificationRequest, bestAttemptContent: UNMutableNotificationContent, completion: () -> Void) {
+func downloadMedia(fileUrl: URL, request: UNNotificationRequest, bestAttemptContent: UNMutableNotificationContent, completion: @escaping () -> Void) {
     let task = URLSession.shared.downloadTask(with: fileUrl) { (location, _, _) in
         if let location = location {
             let tmpDirectory = NSTemporaryDirectory()
@@ -195,7 +195,10 @@ func downloadMedia(fileUrl: URL, request: UNNotificationRequest, bestAttemptCont
                 if let attachment = try? UNNotificationAttachment(identifier: "media." + fileUrl.pathExtension, url: tmpUrl, options: options) {
                     bestAttemptContent.attachments = [attachment]
                 }
-            } catch {}
+                completion()
+            } catch {
+                completion()
+            }
         }
     }
     task.resume()
