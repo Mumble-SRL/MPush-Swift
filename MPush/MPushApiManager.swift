@@ -54,9 +54,12 @@ internal class MPushApiManager {
                                  success: ((_ response: [String: Any]) -> Void)? = nil,
                                  failure: ((_ error: Error?) -> Void)? = nil) {
         let completeUrlString = baseUrl + "/" + name
+        var compelteHeaders = headers ?? []
+        compelteHeaders.append(HTTPHeader(field: "Accept", value: "application/json"))
+        compelteHeaders.append(HTTPHeader(field: "Content-Type", value: "application/json"))
         MBNetworking.request(withUrl: completeUrlString,
                              method: method,
-                             headers: headers,
+                             headers: compelteHeaders,
                              parameters: parameters,
                              encoding: JSONParameterEncoder.default) { response in
                                 parseJsonResponse(response: response, success: success, failure: failure)
