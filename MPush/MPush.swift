@@ -138,7 +138,7 @@ public class MPush {
         
         MPushApiManager.callApi(withName: "unregister-all",
                                 method: .post,
-                                parameters: nil,
+                                parameters: defaultParameters,
                                 headers: defaultHeaders(),
                                 success: { _ in
                                     if let success = success {
