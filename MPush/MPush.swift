@@ -153,8 +153,7 @@ public class MPush {
     ///
     /// - Returns: The default headers used to call the apis
     private static func defaultHeaders() -> [HTTPHeader] {
-        var headers = [HTTPHeader(field: "Accept", value: "application/json"),
-                       HTTPHeader(field: "X-MPush-Version", value: "2")]
+        var headers = [HTTPHeader(field: "X-MPush-Version", value: "2")]
         if !token.isEmpty {
             headers.append(HTTPHeader(field: "X-MPush-Token", value: token))
         }
