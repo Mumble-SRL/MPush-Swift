@@ -1,6 +1,10 @@
+<p align="center" >
+<img src="https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/mpush-icon.png" alt="MBurger Logo" title="MBurger Logo">
+</p>
+
 # MPush iOS SDK
 ![Test Status](docs/badge.svg)
-![License: MIT](https://img.shields.io/badge/pod-v1.0-blue.svg)
+![License: MIT](https://img.shields.io/badge/pod-v0.2.10-blue.svg)
 [![CocoaPods](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 MPush is a client libary, written in Swift, that can be used to interact with the [MPush](https://mpush.app) API. The minimum deplaoyment target for the library is iOS 11.0. 
