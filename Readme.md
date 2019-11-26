@@ -3,7 +3,7 @@
 </p>
 
 # MPush iOS SDK
-![Test Status](docs/badge.svg)
+![Test Status](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)
 ![License: MIT](https://img.shields.io/badge/pod-v0.2.10-blue.svg)
 [![CocoaPods](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 

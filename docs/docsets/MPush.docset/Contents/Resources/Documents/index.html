@@ -13,7 +13,7 @@
     <a title="MPush  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">MPush Docs</a> (100% documented)</p>
+        <p><a href="index.html">MPush 0.1 Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/Mumble-SRL/MPush-iOS"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -49,10 +49,13 @@
         <section>
           <section class="section">
             
-            <h1 id='mpush-ios-sdk' class='heading'>MPush iOS SDK</h1>
+            <p align="center" >
+<img src="https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/mpush-icon.png" alt="MBurger Logo" title="MBurger Logo">
+</p>
+<h1 id='mpush-ios-sdk' class='heading'>MPush iOS SDK</h1>
 
-<p><img src="docs/badge.svg" alt="Test Status">
-<img src="https://img.shields.io/badge/pod-v1.0-blue.svg" alt="License: MIT">
+<p><img src="https://img.shields.io/badge/documentation-100%25-brightgreen.svg" alt="Test Status">
+<img src="https://img.shields.io/badge/pod-v0.2.10-blue.svg" alt="License: MIT">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="CocoaPods"></a></p>
 
 <p>MPush is a client libary, written in Swift, that can be used to interact with the <a href="https://mpush.app">MPush</a> API. The minimum deplaoyment target for the library is iOS 11.0. </p>
@@ -79,7 +82,7 @@
 <span class="n">target</span> <span class="s1">'TargetName'</span> <span class="k">do</span>
     <span class="n">use_frameworks!</span>
 
-    <span class="n">pod</span> <span class="s1">'MPush'</span>
+    <span class="n">pod</span> <span class="s1">'MPushSwift'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -92,7 +95,7 @@
 
 <p>To install the library manually drag and drop the folder <code><a href="Classes/MPush.html">MPush</a></code> to your project structure in XCode. </p>
 
-<p>Note that <code><a href="Classes/MPush.html">MPush</a></code> has <code>Alamofire (4.0)</code> as dependency, so you have to install also this library.</p>
+<p>Note that <code><a href="Classes/MPush.html">MPush</a></code> has <code>MBNetworking (1.0)</code> as dependency, so you have to install also this library.</p>
 <h1 id='usage' class='heading'>Usage</h1>
 
 <p>The first thig you have to do is implement Push Notifications using the <a href="https://developer.apple.com/documentation/usernotifications">UserNotifications</a> framework.</p>
@@ -172,7 +175,7 @@
 <h1 id='integrate-mpush' class='heading'>Integrate MPush</h1>
 
 <p>To integrate MPush to your implementation you need to add this in your AppDelegate</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MPush</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MPushSwift</span>
 
 <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
     <span class="o">...</span>
@@ -219,7 +222,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">downloadMedia</span><span class="p">(</span><span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">UNNotificationRequest</span><span class="p">,</span> <span class="nv">bestAttemptContent</span><span class="p">:</span> <span class="kt">UNMutableNotificationContent</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">downloadMedia</span><span class="p">(</span><span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">UNNotificationRequest</span><span class="p">,</span> <span class="nv">bestAttemptContent</span><span class="p">:</span> <span class="kt">UNMutableNotificationContent</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">downloadTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">fileUrl</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="k">in</span>
         <span class="k">if</span> <span class="k">let</span> <span class="nv">location</span> <span class="o">=</span> <span class="n">location</span> <span class="p">{</span>
             <span class="k">let</span> <span class="nv">tmpDirectory</span> <span class="o">=</span> <span class="kt">NSTemporaryDirectory</span><span class="p">()</span>
@@ -236,7 +239,10 @@
                 <span class="k">if</span> <span class="k">let</span> <span class="nv">attachment</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">UNNotificationAttachment</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"media."</span> <span class="o">+</span> <span class="n">fileUrl</span><span class="o">.</span><span class="n">pathExtension</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="n">tmpUrl</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span> <span class="p">{</span>
                     <span class="n">bestAttemptContent</span><span class="o">.</span><span class="n">attachments</span> <span class="o">=</span> <span class="p">[</span><span class="n">attachment</span><span class="p">]</span>
                 <span class="p">}</span>
-            <span class="p">}</span> <span class="k">catch</span> <span class="p">{}</span>
+                <span class="nf">completion</span><span class="p">()</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+                <span class="nf">completion</span><span class="p">()</span>
+            <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
@@ -263,8 +269,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-01-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-11-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
