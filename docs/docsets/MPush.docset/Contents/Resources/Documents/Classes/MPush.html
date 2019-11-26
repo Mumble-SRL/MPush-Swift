@@ -14,7 +14,7 @@
     <a title="MPush Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MPush Docs</a> (100% documented)</p>
+        <p><a href="../index.html">MPush 0.1 Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/Mumble-SRL/MPush-iOS"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -52,7 +52,7 @@
             <h1>MPush</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MPush</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MPush</span></code></pre>
 
                 </div>
               </div>
@@ -65,9 +65,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cpy)token"></a>
+                    <a name="/s:5MPushAAC5tokenSSvpZ"></a>
                     <a name="//apple_ref/swift/Variable/token" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cpy)token">token</a>
+                    <a class="token" href="#/s:5MPushAAC5tokenSSvpZ">token</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -75,15 +75,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The token of MPush</p>
+                        <p>The token of MPush, this cannot be empty. If so, MPush will throw an error.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -93,9 +92,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cm)registerDeviceWithDeviceToken:success:failure:"></a>
+                    <a name="/s:5MPushAAC14registerDevice11deviceToken7success7failurey10Foundation4DataV_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/registerDevice(deviceToken:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cm)registerDeviceWithDeviceToken:success:failure:">registerDevice(deviceToken:success:failure:)</a>
+                    <a class="token" href="#/s:5MPushAAC14registerDevice11deviceToken7success7failurey10Foundation4DataV_yycSgys5Error_pSgcSgtFZ">registerDevice(deviceToken:success:failure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -110,8 +109,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">registerDevice</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">registerDevice</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
                                   <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                   <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -166,9 +164,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cm)registerToTopic:success:failure:"></a>
+                    <a name="/s:5MPushAAC8register7toTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/register(toTopic:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cm)registerToTopic:success:failure:">register(toTopic:success:failure:)</a>
+                    <a class="token" href="#/s:5MPushAAC8register7toTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ">register(toTopic:success:failure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -183,8 +181,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopic</span> <span class="nv">topic</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopic</span> <span class="nv">topic</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                             <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                             <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -239,9 +236,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cm)registerToTopics:success:failure:"></a>
+                    <a name="/s:5MPushAAC8register8toTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/register(toTopics:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cm)registerToTopics:success:failure:">register(toTopics:success:failure:)</a>
+                    <a class="token" href="#/s:5MPushAAC8register8toTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ">register(toTopics:success:failure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -256,8 +253,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopics</span> <span class="nv">topics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopics</span> <span class="nv">topics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
                             <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                             <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -312,9 +308,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cm)unregisterFromTopic:success:failure:"></a>
+                    <a name="/s:5MPushAAC10unregister9fromTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/unregister(fromTopic:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cm)unregisterFromTopic:success:failure:">unregister(fromTopic:success:failure:)</a>
+                    <a class="token" href="#/s:5MPushAAC10unregister9fromTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ">unregister(fromTopic:success:failure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -329,8 +325,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unregister</span><span class="p">(</span><span class="n">fromTopic</span> <span class="nv">topic</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unregister</span><span class="p">(</span><span class="n">fromTopic</span> <span class="nv">topic</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                               <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                               <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -385,9 +380,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cm)unregisterFromTopics:success:failure:"></a>
+                    <a name="/s:5MPushAAC10unregister10fromTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/unregister(fromTopics:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cm)unregisterFromTopics:success:failure:">unregister(fromTopics:success:failure:)</a>
+                    <a class="token" href="#/s:5MPushAAC10unregister10fromTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ">unregister(fromTopics:success:failure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -402,8 +397,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unregister</span><span class="p">(</span><span class="n">fromTopics</span> <span class="nv">topics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unregister</span><span class="p">(</span><span class="n">fromTopics</span> <span class="nv">topics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
                               <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                               <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -458,9 +452,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MPush@objc(cs)MPush(cm)unregisterFromAllTopicsWithSuccess:failure:"></a>
+                    <a name="/s:5MPushAAC23unregisterFromAllTopics7success7failureyyycSg_ys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/unregisterFromAllTopics(success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MPush@objc(cs)MPush(cm)unregisterFromAllTopicsWithSuccess:failure:">unregisterFromAllTopics(success:failure:)</a>
+                    <a class="token" href="#/s:5MPushAAC23unregisterFromAllTopics7success7failureyyycSg_ys5Error_pSgcSgtFZ">unregisterFromAllTopics(success:failure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -475,8 +469,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unregisterFromAllTopics</span><span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unregisterFromAllTopics</span><span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                            <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -520,8 +513,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-01-31)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-11-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
