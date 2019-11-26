@@ -64,8 +64,8 @@ The first thig you have to do is implement Push Notifications using the [UserNot
 Go to [developer.apple.com](https://www.developer.apple.com) with an admin account and under Keys -> All click the plus button in the top right corner.
  Specify a name for your key and enable Apple Push Notifications service (APNs).
 
-![Key creation 1](Images/Key-creation-1.png)
-![Key creation 2](Images/Key-creation-2.png)
+![Key creation 1](https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/Key-creation-1.png)
+![Key creation 2](https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/Key-creation-2.png)
 
 Then download the .p8 key file created and upload it in our [dashboard](https://mpush.app).
 
@@ -77,7 +77,7 @@ Now go to your app settings under Identifier -> AppId and enable the notificatio
 
 Now it's finally time to move to XCode. Open your project and enable push notifications in the capabilities tab.
 
-![XCode-capabilities](Images/XCode-capabilities.png)
+![XCode-capabilities](https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/XCode-capabilities.png)
 
 In `AppDelegate.swift` add
 
