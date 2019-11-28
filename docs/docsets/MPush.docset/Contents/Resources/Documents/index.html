@@ -4,50 +4,73 @@
     <title>MPush  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+
     <a title="MPush  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">MPush 0.1 Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/Mumble-SRL/MPush-iOS"><img src="img/gh.png"/>View on GitHub</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">MPush Reference</a>
-        <img id="carat" src="img/carat.png" />
-        MPush  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          MPush 0.1 Docs
+        </a>
+         (100% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Mumble-SRL/MPush-iOS">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">MPush Reference</a>
+      <img class="carat" src="img/carat.png" />
+      MPush  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/MPush.html">MPush</a>
+                <a class="nav-group-task-link" href="Classes/MPush.html">MPush</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/MPushError.html">MPushError</a>
+                <a class="nav-group-task-link" href="Structs/MPushError.html">MPushError</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             
             <p align="center" >
 <img src="https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/mpush-icon.png" alt="MBurger Logo" title="MBurger Logo">
@@ -108,8 +131,8 @@
 <p>Go to <a href="https://www.developer.apple.com">developer.apple.com</a> with an admin account and under Keys -&gt; All click the plus button in the top right corner.
  Specify a name for your key and enable Apple Push Notifications service (APNs).</p>
 
-<p><img src="Images/Key-creation-1.png" alt="Key creation 1">
-<img src="Images/Key-creation-2.png" alt="Key creation 2"></p>
+<p><img src="https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/Key-creation-1.png" alt="Key creation 1">
+<img src="https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/Key-creation-2.png" alt="Key creation 2"></p>
 
 <p>Then download the .p8 key file created and upload it in our <a href="https://mpush.app">dashboard</a>.</p>
 
@@ -122,7 +145,7 @@
 
 <p>Now it&rsquo;s finally time to move to XCode. Open your project and enable push notifications in the capabilities tab.</p>
 
-<p><img src="Images/XCode-capabilities.png" alt="XCode-capabilities"></p>
+<p><img src="https://raw.githubusercontent.com/Mumble-SRL/MPush-Swift/master/Images/XCode-capabilities.png" alt="XCode-capabilities"></p>
 
 <p>In <code>AppDelegate.swift</code> add</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UserNotifications</span>
@@ -266,14 +289,16 @@
 
 <p>MPush is released under the MIT license. See <a href="LICENSE">LICENSE</a> for details.</p>
 
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-11-26)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-11-26)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
