@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MPushVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MPushVersionString[];
+FOUNDATION_EXPORT double Pods_MPushSwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MPushSwiftVersionString[];
 

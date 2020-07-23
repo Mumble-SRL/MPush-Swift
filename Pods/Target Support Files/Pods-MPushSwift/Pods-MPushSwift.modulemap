@@ -1,0 +1,6 @@
+module Pods_MPushSwift {
+  umbrella header "Pods-MPushSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

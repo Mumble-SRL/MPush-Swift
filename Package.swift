@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "MPushSwift",
-            targets: ["MPush"])
+            targets: ["MPushSwift"])
 
     ],
     dependencies: [
@@ -19,9 +19,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "MPush",
+            name: "MPushSwift",
             dependencies: ["MBNetworkingSwift"],
-            path: "MPush"
+            path: "MPushSwift"
         )
     ]
 )
