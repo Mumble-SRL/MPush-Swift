@@ -28,7 +28,7 @@ public enum MBError: LocalizedError {
     /// There was an error in the validation process
     /// - Parameters:
     ///   - reason: the reason the validation has failed
-    case validationFailure(reason: Int)
+    case validationFailure(reason: Int, data: Data?)
     /// A general custom error
     /// - Parameters:
     ///   - reason: the string representation of the error

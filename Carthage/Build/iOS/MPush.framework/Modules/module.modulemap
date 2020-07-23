@@ -1,0 +1,11 @@
+framework module MPush {
+  umbrella header "MPush.h"
+
+  export *
+  module * { export * }
+}
+
+module MPush.Swift {
+    header "MPush-Swift.h"
+    requires objc
+}

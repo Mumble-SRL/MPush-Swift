@@ -1,5 +1,5 @@
 PODS:
-  - MBNetworkingSwift (1.0.5)
+  - MBNetworkingSwift (1.0.14)
 
 DEPENDENCIES:
   - MBNetworkingSwift
@@ -9,8 +9,8 @@ SPEC REPOS:
     - MBNetworkingSwift
 
 SPEC CHECKSUMS:
-  MBNetworkingSwift: 98597079391834bbe57394eb94e7206707bdaa44
+  MBNetworkingSwift: e24b93be41ce4fb9247fb902bf5db2877e73a446
 
 PODFILE CHECKSUM: 31d3ad12f696dd8650c20c478ca2dfb69a932ca0
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
