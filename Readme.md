@@ -20,7 +20,16 @@ A topic can represent whatever you want in your system (e.g. the entire app, a u
 
 # Installation
 
-# Installation with CocoaPods
+## Swift Package Manager
+
+With Xcode 11 you can start using [Swift Package Manager](https://swift.org/package-manager/) to add **MPushSwift** to your project. Follow those simple steps:
+
+* In Xcode go to File > Swift Packages > Add Package Dependency.
+* Enter `https://github.com/Mumble-SRL/MPushSwift.git` in the "Choose Package Repository" dialog and press Next.
+* Specify the version using rule "Up to Next Major" with "0.2.13" as its earliest version and press Next.
+* Xcode will try to resolving the version, after this, you can choose the `MPushSwift` library and add it to your app target.
+
+## CocoaPods
 CocoaPods is a dependency manager for iOS, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:
 
 ```ruby
@@ -46,7 +55,15 @@ $ pod install
 
 CocoaPods is the preferred methot to install the library.
 
-# Manual installation
+## Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate MPushSwift into your Xcode project using Carthage, specify it in your Cartfile:
+
+```
+github "Mumble-SRL/MPushSwift"
+```
+
+## Manual installation
 
 To install the library manually drag and drop the folder `MPush` to your project structure in XCode. 
 

@@ -65,9 +65,16 @@ public struct URLParameterEncoder: ParameterEncoder {
                 urlComponents.queryItems = [URLQueryItem]()
                 
                 for (key, value) in parameters {
-                    let queryItem = URLQueryItem(name: key,
-                                                 value: "\(value)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed))
-                    urlComponents.queryItems?.append(queryItem)
+                    if let stringValue = value as? String {
+                        let queryItem = URLQueryItem(name: key,
+                                                     value: stringValue)
+                        urlComponents.queryItems?.append(queryItem)
+                    } else {
+                        let queryItem = URLQueryItem(name: key,
+                                                     value: "\(value)")
+                        
+                        urlComponents.queryItems?.append(queryItem)
+                    }
                 }
                 urlRequest.url = urlComponents.url
             }

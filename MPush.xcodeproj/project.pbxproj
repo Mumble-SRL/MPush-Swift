@@ -7,18 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		662E1F6520D1437D00B7A855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E1F6420D1437D00B7A855 /* AppDelegate.swift */; };
-		662E1F6720D1437D00B7A855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E1F6620D1437D00B7A855 /* ViewController.swift */; };
-		662E1F6A20D1437D00B7A855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E1F6820D1437D00B7A855 /* Main.storyboard */; };
-		662E1F6C20D1437E00B7A855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662E1F6B20D1437E00B7A855 /* Assets.xcassets */; };
-		662E1F6F20D1437E00B7A855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E1F6D20D1437E00B7A855 /* LaunchScreen.storyboard */; };
-		66F94DEF20D143B100405EC0 /* MPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DED20D143B000405EC0 /* MPush.swift */; };
-		66F94DF020D143B100405EC0 /* MPushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DEE20D143B000405EC0 /* MPushApiManager.swift */; };
-		BD9859A7253A61106C50FE66 /* libPods-MPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53D38149DA411631516AC17 /* libPods-MPush.a */; };
+		CA3B01BC1788528D6071CCC7 /* libPods-MPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53D38149DA411631516AC17 /* libPods-MPush.a */; };
+		EC2E5FB424C9C61600BEF154 /* MPush.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2E5FB224C9C61600BEF154 /* MPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC2E5FB824C9C62D00BEF154 /* MPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DED20D143B000405EC0 /* MPush.swift */; };
+		EC2E5FB924C9C62D00BEF154 /* MPushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DEE20D143B000405EC0 /* MPushApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		662E1F6120D1437D00B7A855 /* MPush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662E1F6420D1437D00B7A855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662E1F6620D1437D00B7A855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		662E1F6920D1437D00B7A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,14 +26,17 @@
 		B326D07FEB7B5A05CDF9180A /* Pods-MPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPush.release.xcconfig"; path = "Target Support Files/Pods-MPush/Pods-MPush.release.xcconfig"; sourceTree = "<group>"; };
 		C071FDEC9336BE1BECE27A32 /* Pods-MPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPush.debug.xcconfig"; path = "Target Support Files/Pods-MPush/Pods-MPush.debug.xcconfig"; sourceTree = "<group>"; };
 		E53D38149DA411631516AC17 /* libPods-MPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MPush.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2E5FB024C9C61600BEF154 /* MPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2E5FB224C9C61600BEF154 /* MPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPush.h; sourceTree = "<group>"; };
+		EC2E5FB324C9C61600BEF154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		662E1F5E20D1437D00B7A855 /* Frameworks */ = {
+		EC2E5FAD24C9C61600BEF154 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD9859A7253A61106C50FE66 /* libPods-MPush.a in Frameworks */,
+				CA3B01BC1788528D6071CCC7 /* libPods-MPush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +56,7 @@
 			children = (
 				662E1F6320D1437D00B7A855 /* Example */,
 				66F94DEC20D143A600405EC0 /* MPush */,
+				EC2E5FB124C9C61600BEF154 /* MPush */,
 				662E1F6220D1437D00B7A855 /* Products */,
 				9C6D7B3717950991B9A6A244 /* Pods */,
 				187A03F2BB125F515A629301 /* Frameworks */,
@@ -67,7 +66,7 @@
 		662E1F6220D1437D00B7A855 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				662E1F6120D1437D00B7A855 /* MPush.app */,
+				EC2E5FB024C9C61600BEF154 /* MPush.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,27 +103,47 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EC2E5FB124C9C61600BEF154 /* MPush */ = {
+			isa = PBXGroup;
+			children = (
+				EC2E5FB224C9C61600BEF154 /* MPush.h */,
+				EC2E5FB324C9C61600BEF154 /* Info.plist */,
+			);
+			path = MPush;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EC2E5FAB24C9C61600BEF154 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2E5FB424C9C61600BEF154 /* MPush.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		662E1F6020D1437D00B7A855 /* MPush */ = {
+		EC2E5FAF24C9C61600BEF154 /* MPush */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 662E1F7320D1437E00B7A855 /* Build configuration list for PBXNativeTarget "MPush" */;
+			buildConfigurationList = EC2E5FB524C9C61600BEF154 /* Build configuration list for PBXNativeTarget "MPush" */;
 			buildPhases = (
-				FE874F55B7CCF217BA8764C0 /* [CP] Check Pods Manifest.lock */,
-				662E1F5D20D1437D00B7A855 /* Sources */,
-				662E1F5E20D1437D00B7A855 /* Frameworks */,
-				662E1F5F20D1437D00B7A855 /* Resources */,
-				EC55C3FF21E64BDA00498F98 /* ShellScript */,
+				A59A954E73A4F17CD952C3B5 /* [CP] Check Pods Manifest.lock */,
+				EC2E5FAB24C9C61600BEF154 /* Headers */,
+				EC2E5FAC24C9C61600BEF154 /* Sources */,
+				EC2E5FAD24C9C61600BEF154 /* Frameworks */,
+				EC2E5FAE24C9C61600BEF154 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MPush;
-			productName = Example;
-			productReference = 662E1F6120D1437D00B7A855 /* MPush.app */;
-			productType = "com.apple.product-type.application";
+			productName = MPush;
+			productReference = EC2E5FB024C9C61600BEF154 /* MPush.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -136,13 +155,8 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Mumble;
 				TargetAttributes = {
-					662E1F6020D1437D00B7A855 = {
-						CreatedOnToolsVersion = 9.4;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
+					EC2E5FAF24C9C61600BEF154 = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
@@ -159,39 +173,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				662E1F6020D1437D00B7A855 /* MPush */,
+				EC2E5FAF24C9C61600BEF154 /* MPush */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		662E1F5F20D1437D00B7A855 /* Resources */ = {
+		EC2E5FAE24C9C61600BEF154 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				662E1F6F20D1437E00B7A855 /* LaunchScreen.storyboard in Resources */,
-				662E1F6C20D1437E00B7A855 /* Assets.xcassets in Resources */,
-				662E1F6A20D1437D00B7A855 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EC55C3FF21E64BDA00498F98 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		FE874F55B7CCF217BA8764C0 /* [CP] Check Pods Manifest.lock */ = {
+		A59A954E73A4F17CD952C3B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,14 +214,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		662E1F5D20D1437D00B7A855 /* Sources */ = {
+		EC2E5FAC24C9C61600BEF154 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F94DF020D143B100405EC0 /* MPushApiManager.swift in Sources */,
-				662E1F6720D1437D00B7A855 /* ViewController.swift in Sources */,
-				66F94DEF20D143B100405EC0 /* MPush.swift in Sources */,
-				662E1F6520D1437D00B7A855 /* AppDelegate.swift in Sources */,
+				EC2E5FB824C9C62D00BEF154 /* MPush.swift in Sources */,
+				EC2E5FB924C9C62D00BEF154 /* MPushApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,45 +359,64 @@
 			};
 			name = Release;
 		};
-		662E1F7420D1437E00B7A855 /* Debug */ = {
+		EC2E5FB624C9C61600BEF154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C071FDEC9336BE1BECE27A32 /* Pods-MPush.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AXR257ENWG;
-				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MPush/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.MPush;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		662E1F7520D1437E00B7A855 /* Release */ = {
+		EC2E5FB724C9C61600BEF154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B326D07FEB7B5A05CDF9180A /* Pods-MPush.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AXR257ENWG;
-				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MPush/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.mumblePush;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.MPush;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -417,11 +432,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		662E1F7320D1437E00B7A855 /* Build configuration list for PBXNativeTarget "MPush" */ = {
+		EC2E5FB524C9C61600BEF154 /* Build configuration list for PBXNativeTarget "MPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				662E1F7420D1437E00B7A855 /* Debug */,
-				662E1F7520D1437E00B7A855 /* Release */,
+				EC2E5FB624C9C61600BEF154 /* Debug */,
+				EC2E5FB724C9C61600BEF154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -52,7 +52,7 @@ public struct MBNetworking {
     ///   - headers: The headers for the request, `nil` by default
     ///   - parameters: The parameters for the request, `nil` by default, its an alias for `[String: Any]`
     ///   - encoding: An object that implements `ParameterEncoder`, used to encode the parameters
-    ///   - completion: A completion block that will be called when the request finishes, successfully or with error, the block will have a parameter (the `MBResponse`) and will return no value
+    ///   - completion: A completion block that will be called when the request finishes, successfully or with error, the block will have a parameter (the `MBResponse`) and will return no value, the block will be called in the main thread.
 
     public static func request(withUrl urlString: String,
                                method: HTTPMethod = .get,
@@ -70,14 +70,20 @@ public struct MBNetworking {
             session.dataTask(with: urlRequest) { (data, urlResponse, error) in
                 guard let httpResponse = urlResponse as? HTTPURLResponse else { return }
                 
-                if let validationFailed = httpResponse.validateStatusCode() {
-                    completion(MBResponse<Any>(request: urlRequest, data: data, response: httpResponse, error: error, result: validationFailed))
+                if let validationFailed = httpResponse.validateStatusCode(data: data) {
+                    DispatchQueue.main.async {
+                        completion(MBResponse<Any>(request: urlRequest, data: data, response: httpResponse, error: error, result: validationFailed))
+                    }
                 } else {
-                    completion(MBResponse<Any>(request: urlRequest, data: data, response: httpResponse, error: error, result: extractJSON(data)))
+                    DispatchQueue.main.async {
+                        completion(MBResponse<Any>(request: urlRequest, data: data, response: httpResponse, error: error, result: extractJSON(data)))
+                    }
                 }
             }.resume()
         } catch let error {
-            completion(MBResponse<Any>(error: error, result: MBResult.error(error)))
+            DispatchQueue.main.async {
+                completion(MBResponse<Any>(error: error, result: MBResult.error(error)))
+            }
         }
     }
     
@@ -87,7 +93,7 @@ public struct MBNetworking {
     ///   - headers: The headers for the request, `nil` by default
     ///   - parameters: an array of `MBMultipartForm` objects that will be sent with the response, by default its an empty array
     ///   - encoding: An object that implements `ParameterEncoder`, used to encode the parameters
-    ///   - completion: A completion block that will be called when the request finishes, successfully or with error, the block will have a parameter (the `MBMultipartResponse`) and will return no value
+    ///   - completion: A completion block that will be called when the request finishes, successfully or with error, the block will have a parameter (the `MBMultipartResponse`) and will return no value, the block will be called in the main thread.
     
     public static func upload(toUrl urlString: String,
                               headers: [HTTPHeader]?,
@@ -105,16 +111,22 @@ public struct MBNetworking {
                 case .data(let data):
                     session.uploadTask(with: multipartResult.request, from: data) { (data, response, error) in
                         let parsedResponse = parseResponse(data, error: error, response: response, fileUrl: nil)
-                        completion(parsedResponse)
+                        DispatchQueue.main.async {
+                            completion(parsedResponse)
+                        }
                     }.resume()
                 case .fileUrl(let url):
                     session.uploadTask(with: multipartResult.request, fromFile: url) { (data, response, error) in
                         let parsedResponse = parseResponse(data, error: error, response: response, fileUrl: url)
-                        completion(parsedResponse)
+                        DispatchQueue.main.async {
+                            completion(parsedResponse)
+                        }
                     }.resume()
                 }
             } catch let error {
-                completion(.error(error))
+                DispatchQueue.main.async {
+                    completion(.error(error))
+                }
             }
         }
     }

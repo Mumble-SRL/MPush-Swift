@@ -1,0 +1,20 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "eba6cc7397affba1735a7fafa020a2c0351b7e69",
+  "iOS" : [
+    {
+      "hash" : "b98eb4df7de2d92d027530935888f48123dc8d07ef3d1b344ed17f377549fc8b",
+      "name" : "MPush",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ]
+}

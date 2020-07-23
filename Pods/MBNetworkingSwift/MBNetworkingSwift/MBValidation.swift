@@ -13,12 +13,12 @@ extension HTTPURLResponse {
     // MARK: - Implement all status codes with errors
     
     /// Validate the status code, if it's less than 200 and greater than 300 it returns an error
-    func validateStatusCode() -> MBResult<Any>? {
+    func validateStatusCode(data: Data?) -> MBResult<Any>? {
         switch statusCode {
         case 200..<299:
             return nil
         default:
-            return .error(MBError.validationFailure(reason: statusCode))
+            return .error(MBError.validationFailure(reason: statusCode, data: data))
         }
     }
 }
