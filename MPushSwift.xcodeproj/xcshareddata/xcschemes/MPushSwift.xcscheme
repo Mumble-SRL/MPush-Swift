@@ -31,9 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC2E5FAF24C9C61600BEF154"
-            BuildableName = "MPush.framework"
-            BlueprintName = "MPush"
-            ReferencedContainer = "container:MPush.xcodeproj">
+            BuildableName = "MPushSwift.framework"
+            BlueprintName = "MPushSwift"
+            ReferencedContainer = "container:MPushSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC2E5FAF24C9C61600BEF154"
-            BuildableName = "MPush.framework"
-            BlueprintName = "MPush"
-            ReferencedContainer = "container:MPush.xcodeproj">
+            BuildableName = "MPushSwift.framework"
+            BlueprintName = "MPushSwift"
+            ReferencedContainer = "container:MPushSwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>

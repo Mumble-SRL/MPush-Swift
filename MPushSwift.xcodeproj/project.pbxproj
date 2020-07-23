@@ -7,28 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA3B01BC1788528D6071CCC7 /* libPods-MPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53D38149DA411631516AC17 /* libPods-MPush.a */; };
-		EC2E5FB424C9C61600BEF154 /* MPush.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2E5FB224C9C61600BEF154 /* MPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC2E5FB824C9C62D00BEF154 /* MPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DED20D143B000405EC0 /* MPush.swift */; };
-		EC2E5FB924C9C62D00BEF154 /* MPushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F94DEE20D143B000405EC0 /* MPushApiManager.swift */; };
+		538B319779E5D88C6EAF47D0 /* libPods-MPushSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9D80B8E50B6B69C8A1916E /* libPods-MPushSwift.a */; };
+		ECD2D51B24C9D27E0030F8A5 /* MPush.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD2D51724C9D27E0030F8A5 /* MPush.h */; };
+		ECD2D51C24C9D27E0030F8A5 /* MPushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2D51824C9D27E0030F8A5 /* MPushApiManager.swift */; };
+		ECD2D51E24C9D27E0030F8A5 /* MPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2D51A24C9D27E0030F8A5 /* MPush.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		662E1F6420D1437D00B7A855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		662E1F6620D1437D00B7A855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		662E1F6920D1437D00B7A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		662E1F6B20D1437E00B7A855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		662E1F6E20D1437E00B7A855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		662E1F7020D1437E00B7A855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6682ADA020D29B3E00CB5115 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
-		66F94DED20D143B000405EC0 /* MPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MPush.swift; path = MPush/MPush.swift; sourceTree = SOURCE_ROOT; };
-		66F94DEE20D143B000405EC0 /* MPushApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MPushApiManager.swift; path = MPush/MPushApiManager.swift; sourceTree = SOURCE_ROOT; };
-		B326D07FEB7B5A05CDF9180A /* Pods-MPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPush.release.xcconfig"; path = "Target Support Files/Pods-MPush/Pods-MPush.release.xcconfig"; sourceTree = "<group>"; };
-		C071FDEC9336BE1BECE27A32 /* Pods-MPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPush.debug.xcconfig"; path = "Target Support Files/Pods-MPush/Pods-MPush.debug.xcconfig"; sourceTree = "<group>"; };
-		E53D38149DA411631516AC17 /* libPods-MPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MPush.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2E5FB024C9C61600BEF154 /* MPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2E5FB224C9C61600BEF154 /* MPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPush.h; sourceTree = "<group>"; };
-		EC2E5FB324C9C61600BEF154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9D80B8E50B6B69C8A1916E /* libPods-MPushSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MPushSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EAEBAEBCA3E4774DB92B1E1 /* Pods-MPushSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPushSwift.debug.xcconfig"; path = "Target Support Files/Pods-MPushSwift/Pods-MPushSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		8660ADBF032F6501D312E468 /* Pods-MPushSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPushSwift.release.xcconfig"; path = "Target Support Files/Pods-MPushSwift/Pods-MPushSwift.release.xcconfig"; sourceTree = "<group>"; };
+		EC2E5FB024C9C61600BEF154 /* MPushSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPushSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD2D51724C9D27E0030F8A5 /* MPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPush.h; sourceTree = "<group>"; };
+		ECD2D51824C9D27E0030F8A5 /* MPushApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPushApiManager.swift; sourceTree = "<group>"; };
+		ECD2D51924C9D27E0030F8A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD2D51A24C9D27E0030F8A5 /* MPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPush.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA3B01BC1788528D6071CCC7 /* libPods-MPush.a in Frameworks */,
+				538B319779E5D88C6EAF47D0 /* libPods-MPushSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +39,7 @@
 		187A03F2BB125F515A629301 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E53D38149DA411631516AC17 /* libPods-MPush.a */,
+				3D9D80B8E50B6B69C8A1916E /* libPods-MPushSwift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -54,9 +47,7 @@
 		662E1F5820D1437D00B7A855 = {
 			isa = PBXGroup;
 			children = (
-				662E1F6320D1437D00B7A855 /* Example */,
-				66F94DEC20D143A600405EC0 /* MPush */,
-				EC2E5FB124C9C61600BEF154 /* MPush */,
+				66F94DEC20D143A600405EC0 /* MPushSwift */,
 				662E1F6220D1437D00B7A855 /* Products */,
 				9C6D7B3717950991B9A6A244 /* Pods */,
 				187A03F2BB125F515A629301 /* Frameworks */,
@@ -66,50 +57,29 @@
 		662E1F6220D1437D00B7A855 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC2E5FB024C9C61600BEF154 /* MPush.framework */,
+				EC2E5FB024C9C61600BEF154 /* MPushSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		662E1F6320D1437D00B7A855 /* Example */ = {
+		66F94DEC20D143A600405EC0 /* MPushSwift */ = {
 			isa = PBXGroup;
 			children = (
-				6682ADA020D29B3E00CB5115 /* Example.entitlements */,
-				662E1F6420D1437D00B7A855 /* AppDelegate.swift */,
-				662E1F6620D1437D00B7A855 /* ViewController.swift */,
-				662E1F6820D1437D00B7A855 /* Main.storyboard */,
-				662E1F6B20D1437E00B7A855 /* Assets.xcassets */,
-				662E1F6D20D1437E00B7A855 /* LaunchScreen.storyboard */,
-				662E1F7020D1437E00B7A855 /* Info.plist */,
+				ECD2D51924C9D27E0030F8A5 /* Info.plist */,
+				ECD2D51724C9D27E0030F8A5 /* MPush.h */,
+				ECD2D51A24C9D27E0030F8A5 /* MPush.swift */,
+				ECD2D51824C9D27E0030F8A5 /* MPushApiManager.swift */,
 			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		66F94DEC20D143A600405EC0 /* MPush */ = {
-			isa = PBXGroup;
-			children = (
-				66F94DED20D143B000405EC0 /* MPush.swift */,
-				66F94DEE20D143B000405EC0 /* MPushApiManager.swift */,
-			);
-			path = MPush;
+			path = MPushSwift;
 			sourceTree = "<group>";
 		};
 		9C6D7B3717950991B9A6A244 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C071FDEC9336BE1BECE27A32 /* Pods-MPush.debug.xcconfig */,
-				B326D07FEB7B5A05CDF9180A /* Pods-MPush.release.xcconfig */,
+				5EAEBAEBCA3E4774DB92B1E1 /* Pods-MPushSwift.debug.xcconfig */,
+				8660ADBF032F6501D312E468 /* Pods-MPushSwift.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		EC2E5FB124C9C61600BEF154 /* MPush */ = {
-			isa = PBXGroup;
-			children = (
-				EC2E5FB224C9C61600BEF154 /* MPush.h */,
-				EC2E5FB324C9C61600BEF154 /* Info.plist */,
-			);
-			path = MPush;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,16 +89,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2E5FB424C9C61600BEF154 /* MPush.h in Headers */,
+				ECD2D51B24C9D27E0030F8A5 /* MPush.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EC2E5FAF24C9C61600BEF154 /* MPush */ = {
+		EC2E5FAF24C9C61600BEF154 /* MPushSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC2E5FB524C9C61600BEF154 /* Build configuration list for PBXNativeTarget "MPush" */;
+			buildConfigurationList = EC2E5FB524C9C61600BEF154 /* Build configuration list for PBXNativeTarget "MPushSwift" */;
 			buildPhases = (
 				A59A954E73A4F17CD952C3B5 /* [CP] Check Pods Manifest.lock */,
 				EC2E5FAB24C9C61600BEF154 /* Headers */,
@@ -140,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = MPush;
+			name = MPushSwift;
 			productName = MPush;
-			productReference = EC2E5FB024C9C61600BEF154 /* MPush.framework */;
+			productReference = EC2E5FB024C9C61600BEF154 /* MPushSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -157,10 +127,11 @@
 				TargetAttributes = {
 					EC2E5FAF24C9C61600BEF154 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
-			buildConfigurationList = 662E1F5C20D1437D00B7A855 /* Build configuration list for PBXProject "MPush" */;
+			buildConfigurationList = 662E1F5C20D1437D00B7A855 /* Build configuration list for PBXProject "MPushSwift" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC2E5FAF24C9C61600BEF154 /* MPush */,
+				EC2E5FAF24C9C61600BEF154 /* MPushSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -204,7 +175,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MPush-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MPushSwift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,31 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2E5FB824C9C62D00BEF154 /* MPush.swift in Sources */,
-				EC2E5FB924C9C62D00BEF154 /* MPushApiManager.swift in Sources */,
+				ECD2D51C24C9D27E0030F8A5 /* MPushApiManager.swift in Sources */,
+				ECD2D51E24C9D27E0030F8A5 /* MPush.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		662E1F6820D1437D00B7A855 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				662E1F6920D1437D00B7A855 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		662E1F6D20D1437E00B7A855 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				662E1F6E20D1437E00B7A855 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		662E1F7120D1437E00B7A855 /* Debug */ = {
@@ -361,8 +313,9 @@
 		};
 		EC2E5FB624C9C61600BEF154 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C071FDEC9336BE1BECE27A32 /* Pods-MPush.debug.xcconfig */;
+			baseConfigurationReference = 5EAEBAEBCA3E4774DB92B1E1 /* Pods-MPushSwift.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -370,7 +323,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MPush/Info.plist;
+				INFOPLIST_FILE = MPushSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,6 +336,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.MPush;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -392,8 +347,9 @@
 		};
 		EC2E5FB724C9C61600BEF154 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B326D07FEB7B5A05CDF9180A /* Pods-MPush.release.xcconfig */;
+			baseConfigurationReference = 8660ADBF032F6501D312E468 /* Pods-MPushSwift.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -401,7 +357,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MPush/Info.plist;
+				INFOPLIST_FILE = MPushSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,6 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumble.MPush;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -423,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		662E1F5C20D1437D00B7A855 /* Build configuration list for PBXProject "MPush" */ = {
+		662E1F5C20D1437D00B7A855 /* Build configuration list for PBXProject "MPushSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				662E1F7120D1437E00B7A855 /* Debug */,
@@ -432,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC2E5FB524C9C61600BEF154 /* Build configuration list for PBXNativeTarget "MPush" */ = {
+		EC2E5FB524C9C61600BEF154 /* Build configuration list for PBXNativeTarget "MPushSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2E5FB624C9C61600BEF154 /* Debug */,

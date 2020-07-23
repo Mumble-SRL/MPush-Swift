@@ -1,6 +1,0 @@
-module Pods_MPush {
-  umbrella header "Pods-MPush-umbrella.h"
-
-  export *
-  module * { export * }
-}
