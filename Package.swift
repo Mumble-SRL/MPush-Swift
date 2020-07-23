@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "MPushSwift",
+    platforms: [.iOS(.v11)],
     products: [
         .library(
             name: "MPushSwift",
