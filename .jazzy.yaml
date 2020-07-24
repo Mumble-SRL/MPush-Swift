@@ -2,10 +2,16 @@ clean: true
 readme: Readme.md
 module_version: 0.1
 sdk: iphonesimulator
-xcodebuild_arguments: [-workspace,MPush.xcworkspace,-scheme,MPush]
+
+xcodebuild_arguments:
+    - "-workspace"
+    - "MPushSwift.xcworkspace"
+    - "-scheme"
+    - "MPushSwift"
 
 author: Mumble
 author_url: https://mumbleideas.it/
 github_url: https://github.com/Mumble-SRL/MPush-iOS
 
 theme: fullwidth
+

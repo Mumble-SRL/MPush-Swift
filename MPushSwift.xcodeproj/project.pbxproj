@@ -11,6 +11,7 @@
 		ECD2D51B24C9D27E0030F8A5 /* MPush.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD2D51724C9D27E0030F8A5 /* MPush.h */; };
 		ECD2D51C24C9D27E0030F8A5 /* MPushApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2D51824C9D27E0030F8A5 /* MPushApiManager.swift */; };
 		ECD2D51E24C9D27E0030F8A5 /* MPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2D51A24C9D27E0030F8A5 /* MPush.swift */; };
+		ECF2C15024CB2A0200521BC8 /* MPTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2C14F24CB2A0200521BC8 /* MPTopic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		ECD2D51824C9D27E0030F8A5 /* MPushApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPushApiManager.swift; sourceTree = "<group>"; };
 		ECD2D51924C9D27E0030F8A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD2D51A24C9D27E0030F8A5 /* MPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPush.swift; sourceTree = "<group>"; };
+		ECF2C14F24CB2A0200521BC8 /* MPTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTopic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				ECD2D51924C9D27E0030F8A5 /* Info.plist */,
 				ECD2D51724C9D27E0030F8A5 /* MPush.h */,
 				ECD2D51A24C9D27E0030F8A5 /* MPush.swift */,
+				ECF2C14F24CB2A0200521BC8 /* MPTopic.swift */,
 				ECD2D51824C9D27E0030F8A5 /* MPushApiManager.swift */,
 			);
 			path = MPushSwift;
@@ -191,6 +194,7 @@
 			files = (
 				ECD2D51C24C9D27E0030F8A5 /* MPushApiManager.swift in Sources */,
 				ECD2D51E24C9D27E0030F8A5 /* MPush.swift in Sources */,
+				ECF2C15024CB2A0200521BC8 /* MPTopic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

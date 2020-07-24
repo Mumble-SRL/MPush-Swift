@@ -3,9 +3,11 @@
 </p>
 
 # MPush iOS SDK
-![Test Status](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)
-![License: MIT](https://img.shields.io/badge/pod-v0.2.12-blue.svg)
-[![CocoaPods](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)](https://github.com/Mumble-SRL/MPush-Swift/tree/master/docs)
+[![](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
+[![CocoaPods](https://img.shields.io/badge/pod-v0.2.13-blue.svg)](https://cocoapods.org)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
 
 MPush is a client libary, written in Swift, that can be used to interact with the [MPush](https://mpush.app) API. The minimum deplaoyment target for the library is iOS 11.0. 
 
@@ -164,14 +166,21 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     MPush.registerDevice(deviceToken: deviceToken, success: {
-        MPush.register(toTopic: "YOUR_TOPIC")
+        MPush.register(toTopic: MPTopic("YOUR_TOPIC"))
         // OR if you have more than one topic
-        // MPush.register(toTopics: ["TOPIC1", "TOPIC2"])
+        // MPush.register(toTopics: [MPTopic("TOPIC1"), MPTopic("TOPIC2")])
     })
 }
 
 ```
 You're set 🎉, the device will receive notifications for the topic is registered to. 
+
+### MPTopic additional parameters
+
+When creating topic you can specify additional parameters:
+
+* `title`: a title fot that topic that will be displayed in the dashboard, if not specified it has the same value as the topic id
+* `single`: If the topic identify a single user or a group of users, defaults to `false`
 
 # Rich Notifications
 
