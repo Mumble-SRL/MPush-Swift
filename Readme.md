@@ -166,14 +166,21 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     MPush.registerDevice(deviceToken: deviceToken, success: {
-        MPush.register(toTopic: "YOUR_TOPIC")
+        MPush.register(toTopic: MPTopic("YOUR_TOPIC"))
         // OR if you have more than one topic
-        // MPush.register(toTopics: ["TOPIC1", "TOPIC2"])
+        // MPush.register(toTopics: [MPTopic("TOPIC1"), MPTopic("TOPIC2")])
     })
 }
 
 ```
 You're set 🎉, the device will receive notifications for the topic is registered to. 
+
+### MPTopic additional parameters
+
+When creating topic you can specify additional parameters:
+
+* `title`: a title fot that topic that will be displayed in the dashboard, if not specified it has the same value as the topic id
+* `single`: If the topic identify a single user or a group of users, defaults to `false`
 
 # Rich Notifications
 

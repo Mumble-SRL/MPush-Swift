@@ -52,7 +52,7 @@ public class MPush {
     ///   - topic: The topic you will register to
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func register(toTopic topic: String,
+    public static func register(toTopic topic: MPTopic,
                                 success: (() -> Void)? = nil,
                                 failure: ((_ error: Error?) -> Void)? = nil) {
         self.register(toTopics: [topic], success: success, failure: failure)
@@ -64,15 +64,23 @@ public class MPush {
     ///   - topics: The topics you will register to
     ///   - success: A block object to be executed when the task finishes successfully. This block has no return value and no arguments.
     ///   - failure: A block object to be executed when the task finishes unsuccessfully, or that finishes successfully, but the server encountered an error. This block has no return value and takes one argument: the error describing the error that occurred.
-    public static func register(toTopics topics: [String],
+    public static func register(toTopics topics: [MPTopic],
                                 success: (() -> Void)? = nil,
                                 failure: ((_ error: Error?) -> Void)? = nil) {
         precondition(!token.isEmpty, tokenError().localizedDescription)
         
         var parameters = defaultParameters
         do {
-            let encodedTopics = try JSONEncoder().encode(topics)
-            parameters["topics"] = String(data: encodedTopics, encoding: .utf8)
+            
+            let topicsJsonArray: [[String: AnyHashable]] = topics.map({
+                return [
+                    "code": $0.code ?? "",
+                    "title": $0.title ?? "",
+                    "single": $0.single ?? false
+                ]
+            })
+            let data = try JSONSerialization.data(withJSONObject: topicsJsonArray, options: [JSONSerialization.WritingOptions(rawValue: 0)])
+            parameters["topics"] = String(data: data, encoding: .utf8)
         } catch { }
         
         MPushApiManager.callApi(withName: "register",
@@ -86,7 +94,7 @@ public class MPush {
         }, failure: failure)
     }
     
-    /// Unregister the current device from a topic
+    /// Unregister the current device from a topic, the topic is matched using the code of the topic
     ///
     /// - Parameters:
     ///   - topic: The topic you will unregister from
@@ -99,7 +107,7 @@ public class MPush {
         
     }
     
-    /// Unregister the current device from an array of topics
+    /// Unregister the current device from an array of topics, topics are matched using the code
     ///
     /// - Parameters:
     ///   - topics: The topics you will unregister from

@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          MPush 0.1 Docs
+          MPushSwift 0.1 Docs
         </a>
          (100% documented)
       </p>
@@ -42,7 +42,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">MPush Reference</a>
+      <a class="breadcrumb" href="../index.html">MPushSwift Reference</a>
       <img class="carat" src="../img/carat.png" />
       MPush Class Reference
     </p>
@@ -53,6 +53,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MPTopic.html">MPTopic</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MPush.html">MPush</a>
               </li>
@@ -71,10 +74,11 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>MPush</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MPush</span></code></pre>
 
                 </div>
@@ -91,9 +95,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC5tokenSSvpZ"></a>
+                    <a name="/s:10MPushSwift0A0C5tokenSSvpZ"></a>
                     <a name="//apple_ref/swift/Variable/token" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC5tokenSSvpZ">token</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C5tokenSSvpZ">token</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -118,9 +122,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC14registerDevice11deviceToken7success7failurey10Foundation4DataV_yycSgys5Error_pSgcSgtFZ"></a>
+                    <a name="/s:10MPushSwift0A0C14registerDevice11deviceToken7success7failurey10Foundation4DataV_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/registerDevice(deviceToken:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC14registerDevice11deviceToken7success7failurey10Foundation4DataV_yycSgys5Error_pSgcSgtFZ">registerDevice(deviceToken:success:failure:)</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C14registerDevice11deviceToken7success7failurey10Foundation4DataV_yycSgys5Error_pSgcSgtFZ">registerDevice(deviceToken:<wbr>success:<wbr>failure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -190,9 +194,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC8register7toTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ"></a>
+                    <a name="/s:10MPushSwift0A0C8register7toTopic7success7failureyAA7MPTopicC_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/register(toTopic:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC8register7toTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ">register(toTopic:success:failure:)</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C8register7toTopic7success7failureyAA7MPTopicC_yycSgys5Error_pSgcSgtFZ">register(toTopic:<wbr>success:<wbr>failure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -207,7 +211,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopic</span> <span class="nv">topic</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopic</span> <span class="nv">topic</span><span class="p">:</span> <span class="kt"><a href="../Classes/MPTopic.html">MPTopic</a></span><span class="p">,</span>
                             <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                             <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -262,9 +266,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC8register8toTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ"></a>
+                    <a name="/s:10MPushSwift0A0C8register8toTopics7success7failureySayAA7MPTopicCG_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/register(toTopics:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC8register8toTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ">register(toTopics:success:failure:)</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C8register8toTopics7success7failureySayAA7MPTopicCG_yycSgys5Error_pSgcSgtFZ">register(toTopics:<wbr>success:<wbr>failure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -279,7 +283,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopics</span> <span class="nv">topics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">toTopics</span> <span class="nv">topics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MPTopic.html">MPTopic</a></span><span class="p">],</span>
                             <span class="nv">success</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                             <span class="nv">failure</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
@@ -334,9 +338,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC10unregister9fromTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ"></a>
+                    <a name="/s:10MPushSwift0A0C10unregister9fromTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/unregister(fromTopic:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC10unregister9fromTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ">unregister(fromTopic:success:failure:)</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C10unregister9fromTopic7success7failureySS_yycSgys5Error_pSgcSgtFZ">unregister(fromTopic:<wbr>success:<wbr>failure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -344,7 +348,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unregister the current device from a topic</p>
+                        <p>Unregister the current device from a topic, the topic is matched using the code of the topic</p>
 
                       </div>
                       <div class="declaration">
@@ -406,9 +410,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC10unregister10fromTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ"></a>
+                    <a name="/s:10MPushSwift0A0C10unregister10fromTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/unregister(fromTopics:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC10unregister10fromTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ">unregister(fromTopics:success:failure:)</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C10unregister10fromTopics7success7failureySaySSG_yycSgys5Error_pSgcSgtFZ">unregister(fromTopics:<wbr>success:<wbr>failure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -416,7 +420,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unregister the current device from an array of topics</p>
+                        <p>Unregister the current device from an array of topics, topics are matched using the code</p>
 
                       </div>
                       <div class="declaration">
@@ -478,9 +482,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MPushAAC23unregisterFromAllTopics7success7failureyyycSg_ys5Error_pSgcSgtFZ"></a>
+                    <a name="/s:10MPushSwift0A0C23unregisterFromAllTopics7success7failureyyycSg_ys5Error_pSgcSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/unregisterFromAllTopics(success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MPushAAC23unregisterFromAllTopics7success7failureyyycSg_ys5Error_pSgcSgtFZ">unregisterFromAllTopics(success:failure:)</a>
+                    <a class="token" href="#/s:10MPushSwift0A0C23unregisterFromAllTopics7success7failureyyycSg_ys5Error_pSgcSgtFZ">unregisterFromAllTopics(success:<wbr>failure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -542,8 +546,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2019-11-26)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2020-07-24)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
