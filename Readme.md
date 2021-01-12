@@ -5,7 +5,7 @@
 # MPush iOS SDK
 [![Documentation](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)](https://github.com/Mumble-SRL/MPush-Swift/tree/master/docs)
 [![](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
-[![CocoaPods](https://img.shields.io/badge/pod-v0.2.13-blue.svg)](https://cocoapods.org)
+[![CocoaPods](https://img.shields.io/badge/pod-v0.4.2-blue.svg)](https://cocoapods.org)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
 
@@ -180,7 +180,7 @@ You're set 🎉, the device will receive notifications for the topic is register
 When creating topic you can specify additional parameters:
 
 * `title`: a title fot that topic that will be displayed in the dashboard, if not specified it has the same value as the topic id
-* `single`: If the topic identify a single user or a group of users, defaults to `false`
+* `single`: If the topic identifies a single user or a group of users, defaults to `false`
 
 # Rich Notifications
 
