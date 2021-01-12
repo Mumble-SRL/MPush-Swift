@@ -180,7 +180,7 @@ You're set 🎉, the device will receive notifications for the topic is register
 When creating topic you can specify additional parameters:
 
 * `title`: a title fot that topic that will be displayed in the dashboard, if not specified it has the same value as the topic id
-* `single`: If the topic identify a single user or a group of users, defaults to `false`
+* `single`: If the topic identifies a single user or a group of users, defaults to `false`
 
 # Rich Notifications
 
